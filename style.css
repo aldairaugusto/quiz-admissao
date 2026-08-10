@@ -1,0 +1,87 @@
+/* Estilos Globais */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+body { background: linear-gradient(135deg, #e0e7ff, #f0f4ff); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+
+/* Container Principal */
+.container { 
+    background: white; width: 100%; max-width: 650px; padding: 40px; border-radius: 24px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: all 0.3s ease;
+}
+
+/* Telas */
+.tela { display: none; flex-direction: column; gap: 25px; }
+.tela.active { display: flex; }
+.fade-in { animation: fadeIn 0.4s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* =========== TELA DE INÍCIO =========== */
+.logo-area { text-align: center; margin-bottom: 10px; }
+.icon-box { font-size: 50px; margin-bottom: 10px; }
+.logo-area h1 { font-size: 28px; color: #1a202c; font-weight: 700; letter-spacing: -0.5px; }
+.subtitle { color: #718096; font-size: 16px; margin-top: 5px; }
+
+.input-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.input-group label { font-weight: 600; color: #2d3748; font-size: 14px; }
+input { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; outline: none; transition: 0.3s; }
+input:focus { border-color: #4f46e5; box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
+
+.btn-primary { 
+    width: 100%; padding: 16px; background: #4f46e5; color: white; border: none; border-radius: 12px; 
+    font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.3s; letter-spacing: 1px;
+}
+.btn-primary:hover { background: #4338ca; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4); }
+
+.footer-info { display: flex; justify-content: space-between; color: #a0aec0; font-size: 13px; margin-top: 10px; border-top: 1px solid #edf2f7; padding-top: 15px; }
+
+/* =========== TELA DO QUIZ =========== */
+.header-quiz { display: flex; justify-content: space-between; background: #f7fafc; padding: 15px; border-radius: 12px; }
+.user-badge, .progress-badge { background: white; padding: 5px 15px; border-radius: 20px; font-weight: 500; color: #4a5568; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.nivel-wrapper { margin-bottom: 15px; }
+.nivel-tag { background: #e2e8f0; color: #2d3748; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; font-weight: 600; }
+.question-text { font-size: 18px; font-weight: 500; color: #1a202c; line-height: 1.6; margin-bottom: 20px; }
+
+.options-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 5px; }
+.opcao-btn { background: #f7fafc; border: 2px solid #e2e8f0; color: #2d3748; text-align: left; padding: 14px; border-radius: 12px; font-size: 15px; cursor: pointer; transition: 0.2s; }
+.opcao-btn:hover:not(:disabled) { background: #edf2f7; border-color: #a0aec0; }
+.opcao-btn.correct { background: #c6f6d5; border-color: #48bb78; color: #22543d; }
+.opcao-btn.wrong { background: #fed7d7; border-color: #fc8181; color: #9b2c2c; }
+
+.btn-next { margin-top: 25px; }
+
+/* =========== TELA DE RESULTADO =========== */
+.result-header { text-align: center; margin-bottom: 10px; }
+.result-icon { font-size: 60px; display: block; margin-bottom: 5px; }
+.result-name { text-align: center; font-size: 20px; font-weight: 600; color: #1a202c; }
+
+.resultado-box { background: #f7fafc; padding: 25px; border-radius: 16px; }
+.stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #edf2f7; font-size: 16px; }
+.stat-row:last-child { border-bottom: none; }
+.stat-row.highlight .stat-value { color: #4f46e5; font-weight: 700; font-size: 18px; }
+.stat-label { color: #4a5568; }
+.stat-value { font-weight: 500; color: #2d3748; }
+
+.status-box { padding: 15px; border-radius: 12px; text-align: center; font-weight: 600; margin-top: 5px; }
+.status-box.aprovado { background: #c6f6d5; color: #22543d; border: 1px solid #9ae6b4; }
+.status-box.reprovado { background: #fed7d7; color: #9b2c2c; border: 1px solid #feb2b2; }
+
+/* =========== DASHBOARD DO ADMIN =========== */
+.admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #edf2f7; padding-bottom: 15px; }
+.admin-title { display: flex; align-items: center; gap: 10px; }
+.admin-title h2 { color: #1a202c; margin: 0; }
+.admin-icon { font-size: 24px; }
+.btn-exit { background: none; border: 1px solid #e2e8f0; color: #718096; padding: 8px 20px; border-radius: 8px; cursor: pointer; transition: 0.3s; font-weight: 600; margin: 0; width: auto;}
+.btn-exit:hover { background: #f7fafc; border-color: #a0aec0; }
+
+.admin-stats { display: flex; gap: 15px; margin-top: 10px; }
+.stat-card { flex: 1; background: #f7fafc; text-align: center; padding: 20px; border-radius: 12px; border: 1px solid #edf2f7; }
+.stat-card .stat-number { display: block; font-size: 28px; font-weight: 700; color: #4f46e5; }
+.stat-card .stat-label { color: #718096; font-size: 14px; margin-top: 5px; display: block; }
+
+.table-wrapper { margin-top: 15px; border: 1px solid #e2e8f0; border-radius: 12px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 400px;}
+th { background: #f7fafc; color: #4a5568; font-weight: 600; padding: 15px; text-align: left; border-bottom: 2px solid #e2e8f0; }
+td { padding: 15px; border-bottom: 1px solid #edf2f7; color: #2d3748; }
+tr:last-child td { border-bottom: none; }
+tr:hover { background: #fafbff; }
+
+.loading-state { padding: 40px; text-align: center; color: #a0aec0; font-size: 15px; }

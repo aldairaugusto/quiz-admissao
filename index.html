@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado de Admissão - 10ª Classe</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Importando a fonte Roboto para um design mais moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- ========================================== -->
+        <!-- TELA DE INÍCIO (Layout Moderno para Aluno)  -->
+        <!-- ========================================== -->
+        <div id="tela-inicio" class="tela active fade-in">
+            <div class="logo-area">
+                <div class="icon-box">🎓</div>
+                <h1>Simulado de Admissão</h1>
+                <p class="subtitle">Prepare-se para o Exame da 10ª Classe</p>
+            </div>
+            
+            <div class="form-area">
+                <div class="input-group">
+                    <label for="nome-aluno">Digite seu nome completo</label>
+                    <input type="text" id="nome-aluno" placeholder="Ex: João Pedro da Silva" required>
+                </div>
+                <button class="btn-primary" onclick="iniciarQuiz()">▶ Iniciar Teste</button>
+            </div>
+
+            <div class="footer-info">
+                <span>📝 40 Questões aleatórias</span>
+                <span>⏱ Sem limite de tempo</span>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TELA DO QUIZ (Perguntas)                    -->
+        <!-- ========================================== -->
+        <div id="tela-quiz" class="tela fade-in">
+            <div class="header-quiz">
+                <div class="user-badge">
+                    <span>👤</span> <span id="nome-exibido">Aluno</span>
+                </div>
+                <div class="progress-badge">
+                    <span id="progresso">1 / 40</span>
+                </div>
+            </div>
+            
+            <div id="area-pergunta">
+                <div class="nivel-wrapper">
+                    <h3 id="nivel-atual" class="nivel-tag">Língua Portuguesa</h3>
+                </div>
+                <p id="pergunta-texto" class="question-text">Carregando pergunta...</p>
+                
+                <div id="opcoes-container" class="options-grid"></div>
+                
+                <button id="btn-proximo" onclick="proximaPergunta()" class="btn-primary btn-next" style="display:none;">Próxima Pergunta →</button>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TELA DE RESULTADO (Aluno)                   -->
+        <!-- ========================================== -->
+        <div id="tela-resultado" class="tela fade-in">
+            <div class="result-header">
+                <div class="result-icon">🏆</div>
+                <h2>Resultado Final</h2>
+            </div>
+            
+            <p id="resultado-nome" class="result-name"></p>
+            
+            <div class="resultado-box">
+                <div class="stat-row">
+                    <span class="stat-label">✅ Acertos:</span>
+                    <span class="stat-value" id="acertos-final">0</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">📝 Total de Perguntas:</span>
+                    <span class="stat-value" id="total-final">0</span>
+                </div>
+                <div class="stat-row highlight">
+                    <span class="stat-label">📊 Percentagem:</span>
+                    <span class="stat-value" id="percentual-final">0%</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">📈 Classificação:</span>
+                    <span class="stat-value" id="classificacao-final"></span>
+                </div>
+            </div>
+            
+            <div id="status-exame" class="status-box"></div>
+            
+            <button class="btn-primary" onclick="location.reload()">🔄 Refazer Teste</button>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- TELA DO DASHBOARD (Admin - Layout Gestão)   -->
+        <!-- ========================================== -->
+        <div id="tela-admin" class="tela fade-in">
+            <div class="admin-header">
+                <div class="admin-title">
+                    <span class="admin-icon">🛡️</span>
+                    <h2>Painel de Controle</h2>
+                </div>
+                <button onclick="location.reload()" class="btn-exit">🚪 Sair</button>
+            </div>
+            
+            <div class="admin-stats">
+                <div class="stat-card" id="total-alunos-card">
+                    <span class="stat-number" id="total-alunos-count">0</span>
+                    <span class="stat-label">Total de Alunos</span>
+                </div>
+                <div class="stat-card" id="media-geral-card">
+                    <span class="stat-number" id="media-geral-count">0%</span>
+                    <span class="stat-label">Média Geral</span>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <div id="lista-alunos">
+                    <div class="loading-state">Carregando dados do servidor...</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
