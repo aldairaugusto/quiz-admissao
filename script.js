@@ -185,6 +185,17 @@ async function salvarNoBancoNeon(nome, acertos, total, percentual) {
 const SENHA_ADMIN = "admin123"; 
 let sequenciaTeclas = "";
 
+// 1. DETECTA SE O USUÁRIO ACESSOU O LINK SECRETO (/admin)
+window.onload = function() {
+    const url = window.location.pathname;
+    // Se o final da url for "/admin", abre o painel automaticamente
+    if (url === "/admin") {
+        // Espera um pouquinho para a página carregar direito e chama o login
+        setTimeout(abrirLoginAdmin, 300);
+    }
+};
+
+// 2. MANTÉM O CÓDIGO DA TECLA 'A' (para acesso pelo computador)
 document.addEventListener('keydown', function(e) {
     if (e.key === 'a' || e.key === 'A') {
         sequenciaTeclas += 'a';
@@ -196,6 +207,7 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+// 3. FUNÇÃO DE LOGIN (Agora com um visual melhor para celular)
 function abrirLoginAdmin() {
     let senha = prompt("🔐 Acesso restrito. Digite a senha do Administrador:");
     if (senha === SENHA_ADMIN) {
@@ -203,7 +215,7 @@ function abrirLoginAdmin() {
         document.getElementById('tela-admin').classList.add('active');
         carregarDashboardNeon(); 
     } else if (senha !== null) {
-        alert("Senha incorreta!");
+        alert("Senha incorreta! Acesso negado.");
     }
 }
 
