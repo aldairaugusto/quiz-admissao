@@ -3,7 +3,7 @@ const { Pool } = require('pg');
 
 // Configure a conexão com o Neon (COLE SUA STRING AQUI)
 const pool = new Pool({
-  connectionString: 'postgresql://usuario:senha@ep-cool-river-123456.us-east-2.aws.neon.tech/neondb?sslmode=require', 
+  connectionString: 'postgresql://neondb_owner:npg_iJNzq3eOb2Bx@ep-sparkling-unit-ax23jffk-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require', 
   ssl: {
     rejectUnauthorized: false // OBRIGATÓRIO na Vercel
   }
