@@ -1,8 +1,10 @@
 /* ================================================================
-   BANCO DE DADOS DAS PERGUNTAS (Unificado com mais de 55 questões)
+   BANCO DE DADOS DAS PERGUNTAS (Unificado com mais de 110 questões)
    ================================================================ */
 const todasPerguntas = [
-    // --- LÍNGUA PORTUGUESA (14 questões) ---
+    // =============================================================
+    // 1. LÍNGUA PORTUGUESA (Fonética, Morfologia, Sintaxe, Verbos)
+    // =============================================================
     { nivel: "Língua Portuguesa", pergunta: "Qual das palavras abaixo possui ditongo nasal?", opcoes: ["Mão", "Pai", "Herói", "Céu"], correta: 0 },
     { nivel: "Língua Portuguesa", pergunta: "Assinale a opção correta quanto ao uso de diacríticos (acentos):", opcoes: ["Avó (mãe do pai) e Avô (pai da mãe)", "Pára (verbo) e Para (preposição)", "Tem (singular) e Têm (plural)", "Pôde (pretérito) e Pode (presente)"], correta: 3 },
     { nivel: "Língua Portuguesa", pergunta: "Assinale a opção em que a palavra destacada é um verbo irregular:", opcoes: ["Eles **cantaram** na festa", "Eu **trouxe** o livro para aula", "Nós **falaremos** com o professor", "Tu **estudaste** para o teste"], correta: 1 },
@@ -17,8 +19,21 @@ const todasPerguntas = [
     { nivel: "Língua Portuguesa", pergunta: "Em 'O livro cujo autor é famoso', o pronome relativo expressa:", opcoes: ["Posse", "Lugar", "Tempo", "Modo"], correta: 0 },
     { nivel: "Língua Portuguesa", pergunta: "A palavra 'guarda-chuva' é formada pelo processo de:", opcoes: ["Derivação sufixal", "Derivação prefixal", "Composição por aglutinação", "Composição por justaposição"], correta: 3 },
     { nivel: "Língua Portuguesa", pergunta: "No modo conjuntivo (subjuntivo), a forma correta do verbo 'ser' na 1ª pessoa do singular é:", opcoes: ["Sou", "Era", "Seja", "Fui"], correta: 2 },
+    { nivel: "Língua Portuguesa", pergunta: "Em 'Ela gosta de viajar', o termo 'de viajar' exerce função de:", opcoes: ["Objeto direto", "Complemento nominal", "Adjunto adverbial", "Adjunto adnominal"], correta: 1 },
+    { nivel: "Língua Portuguesa", pergunta: "Qual a classificação da palavra 'casa' em 'Minha casa é grande'?", opcoes: ["Substantivo comum", "Substantivo próprio", "Adjetivo", "Advérbio"], correta: 0 },
+    { nivel: "Língua Portuguesa", pergunta: "Na frase 'Choveu muito ontem', temos:", opcoes: ["Sujeito simples", "Sujeito oculto", "Sujeito inexistente (oração sem sujeito)", "Sujeito composto"], correta: 2 },
+    { nivel: "Língua Portuguesa", pergunta: "Qual é o tempo e modo de 'estudaremos'?", opcoes: ["Pretérito perfeito do indicativo", "Futuro do pretérito", "Futuro do presente do indicativo", "Presente do conjuntivo"], correta: 2 },
+    { nivel: "Língua Portuguesa", pergunta: "Indique a única palavra com hiato:", opcoes: ["Coração", "Saída", "Pai", "Mão"], correta: 1 },
+    { nivel: "Língua Portuguesa", pergunta: "Em 'O meu amigo chegou', o termo 'meu' é:", opcoes: ["Artigo", "Adjetivo", "Pronome possessivo", "Pronome indefinido"], correta: 2 },
+    { nivel: "Língua Portuguesa", pergunta: "Assinale a frase em que o verbo está no pretérito imperfeito do indicativo:", opcoes: ["Eu cantei", "Eu cantava", "Eu cantarei", "Eu cante"], correta: 1 },
+    { nivel: "Língua Portuguesa", pergunta: "A palavra 'felizmente' é um:", opcoes: ["Substantivo", "Adjetivo", "Advérbio de modo", "Advérbio de tempo"], correta: 2 },
+    { nivel: "Língua Portuguesa", pergunta: "Qual a função sintática do termo 'de vidro' em 'A casa de vidro é bonita'?", opcoes: ["Adjunto adnominal", "Complemento nominal", "Predicativo do sujeito", "Adjunto adverbial"], correta: 0 },
+    { nivel: "Língua Portuguesa", pergunta: "Na frase 'Quando ele saiu, eu dormi', a primeira oração é:", opcoes: ["Subordinada temporal", "Subordinada causal", "Coordenada sindética", "Subordinada condicional"], correta: 0 },
+    { nivel: "Língua Portuguesa", pergunta: "Qual o plural de 'cidadão'?", opcoes: ["Cidadãos", "Cidadões", "Cidadães", "Cidadão"], correta: 0 },
 
-    // --- MATEMÁTICA (21 questões) ---
+    // =============================================================
+    // 2. MATEMÁTICA (Polinômios, Trigonometria, Equações, Conjuntos)
+    // =============================================================
     { nivel: "Matemática", pergunta: "Calcule 6a³b² - 5a²b³ + 9a⁴b para a=2/3 e b=-3/2.", opcoes: ["2", "-4", "6", "-2"], correta: 2 },
     { nivel: "Matemática", pergunta: "Resolva o sistema: 2x - y = 1 e y - 3x = -1", opcoes: ["x=1, y=4", "x=4, y=1", "x=3, y=2", "x=2, y=3"], correta: 3 },
     { nivel: "Matemática", pergunta: "Qual é a representação do número 0,2 em forma de fração?", opcoes: ["1/2", "1/4", "1/5", "2/5"], correta: 2 },
@@ -40,8 +55,18 @@ const todasPerguntas = [
     { nivel: "Matemática", pergunta: "Na equação do 2º grau x² - 4x + 4 = 0, o discriminante (Δ) é igual a:", opcoes: ["4", "8", "0", "-4"], correta: 2 },
     { nivel: "Matemática", pergunta: "Qual o valor de x que satisfaz x² - 5x + 6 = 0?", opcoes: ["x=2 ou x=3", "x=-2 ou x=-3", "x=1 ou x=6", "x=4 ou x=2"], correta: 0 },
     { nivel: "Matemática", pergunta: "Resolva o sistema linear: 2x + y = 5 e 3x - y = 10", opcoes: ["x=2, y=1", "x=3, y=-1", "x=4, y=-3", "x=5, y=-5"], correta: 1 },
+    { nivel: "Matemática", pergunta: "Qual a forma correta do radical √(27) + √(3)?", opcoes: ["√(30)", "3√(3)", "4√(3)", "√(24)"], correta: 2 },
+    { nivel: "Matemática", pergunta: "Em um triângulo retângulo, seno de 30º é:", opcoes: ["1/2", "√2/2", "√3/2", "1"], correta: 0 },
+    { nivel: "Matemática", pergunta: "Qual o resultado de (a + b)²?", opcoes: ["a² + b²", "a² + 2ab + b²", "a² - b²", "a² - 2ab + b²"], correta: 1 },
+    { nivel: "Matemática", pergunta: "Quantos números ímpares existem de 1 a 100?", opcoes: ["49", "50", "51", "48"], correta: 1 },
+    { nivel: "Matemática", pergunta: "Se 3x = 81, qual o valor de x?", opcoes: ["2", "3", "4", "5"], correta: 2 },
+    { nivel: "Matemática", pergunta: "A expressão (a - b)² é igual a:", opcoes: ["a² + b²", "a² - 2ab + b²", "a² + 2ab + b²", "a² - b²"], correta: 1 },
+    { nivel: "Matemática", pergunta: "Qual é o MMC de 6 e 8?", opcoes: ["12", "16", "24", "48"], correta: 2 },
+    { nivel: "Matemática", pergunta: "Um retângulo tem comprimento 10 e largura 6. Qual o perímetro?", opcoes: ["16", "30", "32", "60"], correta: 2 },
 
-    // --- FÍSICA (21 questões) ---
+    // =============================================================
+    // 3. FÍSICA (MRU, Energia, Eletricidade, Força, Eletrostática)
+    // =============================================================
     { nivel: "Física", pergunta: "Dois comboios A (25 km/h) e B (35 km/h, sai 2h depois). Após 6h de A, qual distância separa os comboios?", opcoes: ["150 Km e 140 km; 7 h", "150 Km e 160 km; 7 h", "120 Km e 150 km; 7 h", "140 Km e 170 km; 7 h"], correta: 0 },
     { nivel: "Física", pergunta: "Sob ação de uma força, carrinho percorre 40 cm. Com carga de 200g, percorre 25 cm. Qual a massa do carrinho?", opcoes: ["111 g", "444 g", "333 g", "222 g"], correta: 2 },
     { nivel: "Física", pergunta: "A resistência elétrica de um fio de constantina de 200 m, ρ=0,50 Ω.mm²/m, seção 0,25 mm² é:", opcoes: ["300 Ω", "350 Ω", "450 Ω", "400 Ω"], correta: 3 },
@@ -62,12 +87,22 @@ const todasPerguntas = [
     { nivel: "Física", pergunta: "Num movimento uniforme, a função horária da posição é:", opcoes: ["S = S₀ + at²/2", "S = S₀ + vt", "v = v₀ + at", "S = S₀ + v₀t + at²/2"], correta: 1 },
     { nivel: "Física", pergunta: "Se a distância entre duas cargas elétricas for reduzida à metade, a força eletrostática irá:", opcoes: ["Reduzir à metade", "Dobrar", "Quadruplicar", "Permanecer igual"], correta: 2 },
     { nivel: "Física", pergunta: "Um corpo de 10kg cai de 20m de altura. Desprezando resistência, a velocidade ao solo é:", opcoes: ["10 m/s", "20 m/s", "30 m/s", "40 m/s"], correta: 1 },
-    { nivel: "Física", pergunta: "Qual a potência média de uma pessoa que realiza 600 J de trabalho em 20 segundos?", opcoes: ["30 W", "120 W", "600 W", "12000 W"], correta: 0 }
+    { nivel: "Física", pergunta: "Qual a potência média de uma pessoa que realiza 600 J de trabalho em 20 segundos?", opcoes: ["30 W", "120 W", "600 W", "12000 W"], correta: 0 },
+    { nivel: "Física", pergunta: "A unidade de força no Sistema Internacional (SI) é:", opcoes: ["Newton (N)", "Joule (J)", "Watt (W)", "Volt (V)"], correta: 0 },
+    { nivel: "Física", pergunta: "Qual o trabalho realizado por uma força de 50 N que desloca um corpo por 10 m?", opcoes: ["500 J", "5 J", "50 J", "5000 J"], correta: 0 },
+    { nivel: "Física", pergunta: "Em um circuito em série com duas resistências de 10Ω, a resistência total é:", opcoes: ["10Ω", "5Ω", "20Ω", "15Ω"], correta: 2 },
+    { nivel: "Física", pergunta: "A corrente elétrica é medida em:", opcoes: ["Volts (V)", "Ohms (Ω)", "Amperes (A)", "Watts (W)"], correta: 2 },
+    { nivel: "Física", pergunta: "Quanto tempo um carro a 100 km/h leva para percorrer 200 km?", opcoes: ["2 h", "1 h", "3 h", "4 h"], correta: 0 },
+    { nivel: "Física", pergunta: "O princípio de Arquimedes está relacionado a:", opcoes: ["Eletricidade", "Empuxo (flutuação)", "Refração da luz", "Força magnética"], correta: 1 },
+    { nivel: "Física", pergunta: "A energia potencial gravitacional depende de:", opcoes: ["Apenas da massa", "Apenas da altura", "Massa, altura e gravidade", "Apenas da velocidade"], correta: 2 },
+    { nivel: "Física", pergunta: "Dois carros A e B. A acelera 2m/s² e B acelera 4m/s². Após 3s, qual a velocidade de B?", opcoes: ["6 m/s", "8 m/s", "12 m/s", "4 m/s"], correta: 2 },
+    { nivel: "Física", pergunta: "A lei de Ohm é expressa pela fórmula:", opcoes: ["V = R * I", "V = R / I", "P = V * I", "I = V * R"], correta: 0 },
+    { nivel: "Física", pergunta: "O calor é uma forma de:", opcoes: ["Força", "Energia", "Matéria", "Velocidade"], correta: 1 }
 ];
 
 
 /* ================================================================
-   LÓGICA DO QUIZ
+   LÓGICA DO QUIZ (Sortear 70 de forma aleatória)
    ================================================================ */
 let perguntasSelecionadas = [];
 let perguntaAtualIndex = 0;
@@ -88,7 +123,7 @@ function iniciarQuiz() {
     nomeAluno = nomeInput;
     
     let todasEmbaralhadas = shuffleArray([...todasPerguntas]);
-    perguntasSelecionadas = todasEmbaralhadas.slice(0, 40);
+    perguntasSelecionadas = todasEmbaralhadas.slice(0, 70);
 
     document.getElementById('tela-inicio').classList.remove('active');
     document.getElementById('tela-quiz').classList.add('active');
@@ -180,7 +215,7 @@ async function salvarNoBancoNeon(nome, acertos, total, percentual) {
 
 
 /* ================================================================
-   SISTEMA DO ADMIN (Com senha e buscando os dados online)
+   SISTEMA DO ADMIN (Link Secreto /admin + Senha)
    ================================================================ */
 const SENHA_ADMIN = "admin123"; 
 let sequenciaTeclas = "";
@@ -190,7 +225,6 @@ window.onload = function() {
     const url = window.location.pathname;
     // Se o final da url for "/admin", abre o painel automaticamente
     if (url === "/admin") {
-        // Espera um pouquinho para a página carregar direito e chama o login
         setTimeout(abrirLoginAdmin, 300);
     }
 };
@@ -207,7 +241,7 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// 3. FUNÇÃO DE LOGIN (Agora com um visual melhor para celular)
+// 3. FUNÇÃO DE LOGIN
 function abrirLoginAdmin() {
     let senha = prompt("🔐 Acesso restrito. Digite a senha do Administrador:");
     if (senha === SENHA_ADMIN) {
@@ -230,33 +264,19 @@ async function carregarDashboardNeon() {
 
         if (historico.length === 0) {
             container.innerHTML = `<p style="text-align: center; color: #888;">Nenhum aluno realizou o teste ainda.</p>`;
-            // Se não houver alunos, zera os indicadores
             document.getElementById('total-alunos-count').innerText = "0";
             document.getElementById('media-geral-count').innerText = "0%";
             return;
         }
 
-        // =========================================================
-        // CÁLCULOS DOS CARDS (Total de Alunos e Média Geral)
-        // =========================================================
-        
-        // 1. Total de alunos (quantidade de registros na tabela)
+        // Cálculo do Total e Média
         document.getElementById('total-alunos-count').innerText = historico.length;
+        let soma = 0;
+        historico.forEach(aluno => { soma += parseFloat(aluno.percentual); });
+        let media = (soma / historico.length).toFixed(1);
+        document.getElementById('media-geral-count').innerText = media + "%";
 
-        // 2. Média Geral (Calcula a soma de todas as percentagens e divide pelo total)
-        let somaPercentagens = 0;
-        historico.forEach(aluno => {
-            // Converte a string "86.4%" para número 86.4 para poder somar
-            let perc = parseFloat(aluno.percentual); 
-            somaPercentagens += perc;
-        });
-        
-        let mediaGeral = (somaPercentagens / historico.length).toFixed(1);
-        document.getElementById('media-geral-count').innerText = mediaGeral + "%";
-
-        // =========================================================
-        // MONTAGEM DA TABELA
-        // =========================================================
+        // Montagem da Tabela
         let html = `
             <table>
                 <thead>
@@ -271,9 +291,7 @@ async function carregarDashboardNeon() {
                 <tbody>
         `;
         historico.forEach(aluno => {
-            // Converte a data do banco para um formato legível
             let dataFormatada = new Date(aluno.data_realizacao).toLocaleDateString('pt-BR');
-            
             html += `
                 <tr>
                     <td>${aluno.id}</td>
