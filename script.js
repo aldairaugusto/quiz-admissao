@@ -37,7 +37,6 @@ const todasPerguntas = [
     { nivel: "Matemática", pergunta: "Calcule 6a³b² - 5a²b³ + 9a⁴b para a=2/3 e b=-3/2.", opcoes: ["2", "-4", "6", "-2"], correta: 2 },
     { nivel: "Matemática", pergunta: "Resolva o sistema: 2x - y = 1 e y - 3x = -1", opcoes: ["x=1, y=4", "x=4, y=1", "x=3, y=2", "x=2, y=3"], correta: 3 },
     { nivel: "Matemática", pergunta: "Qual é a representação do número 0,2 em forma de fração?", opcoes: ["1/2", "1/4", "1/5", "2/5"], correta: 2 },
-    { nivel: "Matemática", pergunta: "A solução da equação 3x - 5y + 11 = 0 e 8x - y - 8 = 0 é:", opcoes: ["(-1; 2)", "(1; 2)", "(-2; -1)", "(1; 3)"], correta: 0 },
     { nivel: "Matemática", pergunta: "Calcule a média aritmética de 4, 9 e 3,5:", opcoes: ["39/4", "29/13", "7/3", "13/4"], correta: 1 },
     { nivel: "Matemática", pergunta: "Qual é o resultado de (2a + x² - a²) : (x + a) - (x² - 2a²)/(x-a)?", opcoes: ["4", "2a", "2x", "0"], correta: 1 },
     { nivel: "Matemática", pergunta: "Dados A = 6x³+3x²+2y²+5, B=-5x²+2y²+1. Qual a soma A+B-C, sendo C=x³-2x²+y²?", opcoes: ["5x³ - 3y² + 6", "5x³ - 3x² + 3y² + 6", "5x³ - 3x² + y² + 6", "6x³ - 3x² + 2y² + 6"], correta: 2 },
@@ -59,7 +58,7 @@ const todasPerguntas = [
     { nivel: "Matemática", pergunta: "Em um triângulo retângulo, seno de 30º é:", opcoes: ["1/2", "√2/2", "√3/2", "1"], correta: 0 },
     { nivel: "Matemática", pergunta: "Qual o resultado de (a + b)²?", opcoes: ["a² + b²", "a² + 2ab + b²", "a² - b²", "a² - 2ab + b²"], correta: 1 },
     { nivel: "Matemática", pergunta: "Quantos números ímpares existem de 1 a 100?", opcoes: ["49", "50", "51", "48"], correta: 1 },
-    { nivel: "Matemática", pergunta: "Se 3x = 81, qual o valor de x?", opcoes: ["2", "3", "4", "5"], correta: 2 },
+    { nivel: "Matemática", pergunta: "Se 3^x = 81, qual o valor de x?", opcoes: ["2", "3", "4", "5"], correta: 2 },
     { nivel: "Matemática", pergunta: "A expressão (a - b)² é igual a:", opcoes: ["a² + b²", "a² - 2ab + b²", "a² + 2ab + b²", "a² - b²"], correta: 1 },
     { nivel: "Matemática", pergunta: "Qual é o MMC de 6 e 8?", opcoes: ["12", "16", "24", "48"], correta: 2 },
     { nivel: "Matemática", pergunta: "Um retângulo tem comprimento 10 e largura 6. Qual o perímetro?", opcoes: ["16", "30", "32", "60"], correta: 2 },
@@ -119,7 +118,7 @@ function shuffleArray(array) {
 
 function iniciarQuiz() {
     const nomeInput = document.getElementById('nome-aluno').value.trim();
-    if (!nomeInput) { alert("Por favor, digite o seu nome!"); return; }
+    if (!nomeInput) { alert("Por favor, digite o seu nome para avançar!"); return; }
     nomeAluno = nomeInput;
     
     let todasEmbaralhadas = shuffleArray([...todasPerguntas]);
