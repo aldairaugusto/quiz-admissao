@@ -1958,7 +1958,7 @@ const todasPerguntas = [
 ];
 
 /* ================================================================
-   LÓGICA DO QUIZ (Sortear 70 de forma aleatória)
+   LÓGICA DO QUIZ (Sortear 40 de forma aleatória)
    ================================================================ */
 let perguntasSelecionadas = [];
 let perguntaAtualIndex = 0;
@@ -1979,7 +1979,7 @@ function iniciarQuiz() {
     nomeAluno = nomeInput;
     
     let todasEmbaralhadas = shuffleArray([...todasPerguntas]);
-    perguntasSelecionadas = todasEmbaralhadas.slice(0, 70);
+    perguntasSelecionadas = todasEmbaralhadas.slice(0, 40);
 
     document.getElementById('tela-inicio').classList.remove('active');
     document.getElementById('tela-quiz').classList.add('active');
@@ -2032,7 +2032,7 @@ function finalizarQuiz() {
     document.getElementById('resultado-nome').innerText = `Aluno: ${nomeAluno}`;
     document.getElementById('acertos-final').innerText = acertos;
     document.getElementById('percentual-final').innerText = percentual.toFixed(1) + "%";
-    document.getElementById('classificacao-final').innerText = (percentual >= 70) ? "Bom!" : (percentual >= 50) ? "Razoável" : "Insuficiente";
+    document.getElementById('classificacao-final').innerText = (percentual >= 40) ? "Bom!" : (percentual >= 50) ? "Razoável" : "Insuficiente";
 
     let statusExame = document.getElementById('status-exame');
    if (percentual >= 50) {
