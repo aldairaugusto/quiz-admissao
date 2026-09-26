@@ -1,132 +1,1052 @@
+```html
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado de Admissão - 10ª Classe</title>
+
+    <title>CodeQuiz — Quiz de Programação</title>
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
     <link rel="stylesheet" href="style.css">
-    <!-- Importando a fonte Roboto para um design mais moderno -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        
-        <!-- ========================================== -->
-        <!-- TELA DE INÍCIO (Layout Moderno para Aluno)  -->
-        <!-- ========================================== -->
-        <div id="tela-inicio" class="tela active fade-in">
-            <div class="logo-area">
-                <div class="icon-box">🎓</div>
-                <h1>Simulado de Admissão</h1>
-                <p class="subtitle">Prepare-se para o Exame da 10ª Classe</p>
-            </div>
-            
-            <div class="form-area">
-                <div class="input-group">
-                    <label for="nome-aluno">Digite seu nome completo</label>
-                    <input type="text" id="nome-aluno" placeholder="Ex: João Pedro da Silva" required>
+
+<div class="app">
+
+    <!-- =====================================================
+         TELA DE INÍCIO
+    ====================================================== -->
+
+    <section id="tela-inicio" class="tela active">
+
+        <div class="inicio-container">
+
+            <!-- =================================================
+                 CABEÇALHO / LOGO
+            ================================================== -->
+
+            <header class="inicio-header">
+
+                <div class="brand">
+
+                    <div class="brand-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div class="brand-text">
+                        <strong>CodeQuiz</strong>
+                        <span>Programming Challenge</span>
+                    </div>
+
                 </div>
-                <button class="btn-primary" onclick="iniciarQuiz()">▶ Iniciar Teste</button>
+
+            </header>
+
+
+            <!-- =================================================
+                 CONTEÚDO PRINCIPAL
+            ================================================== -->
+
+            <div class="inicio-content">
+
+                <!-- LADO ESQUERDO -->
+
+                <div class="hero-content">
+
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-terminal"></i>
+                        DESAFIO DE PROGRAMAÇÃO
+                    </div>
+
+
+                    <h1>
+                        Teste seus conhecimentos
+                        <span>em programação.</span>
+                    </h1>
+
+
+                    <p class="hero-description">
+                        Resolva questões de programação, lógica,
+                        algoritmos e estruturas de dados.
+                        Coloque suas habilidades à prova e acompanhe
+                        seu desempenho.
+                    </p>
+
+
+                    <!-- CARACTERÍSTICAS -->
+
+                    <div class="features">
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+
+                            <div>
+                                <strong>Programação</strong>
+                                <span>
+                                    Questões práticas e teóricas
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+
+                            <div>
+                                <strong>Lógica</strong>
+                                <span>
+                                    Desenvolva seu raciocínio
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="feature">
+
+                            <div class="feature-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+
+                            <div>
+                                <strong>Desempenho</strong>
+                                <span>
+                                    Veja seu resultado no final
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CARD DE ACESSO
+                ================================================== -->
+
+                <div class="quiz-start-card">
+
+                    <div class="card-header">
+
+                        <div class="card-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+
+                        <div>
+                            <h2>Começar Quiz</h2>
+
+                            <p>
+                                Informe seus dados para começar
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORMULÁRIO -->
+
+                    <div class="form-area">
+
+                        <div class="input-group">
+
+                            <label for="nome-aluno">
+                                <i class="fa-solid fa-user"></i>
+                                Nome completo
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="nome-aluno"
+                                    placeholder="Digite seu nome completo"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="btn-primary"
+                            onclick="iniciarQuiz()"
+                        >
+
+                            <span>Iniciar Quiz</span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- INFORMAÇÕES -->
+
+                    <div class="quiz-info">
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                            <div>
+                                <strong>40</strong>
+                                <span>Questões</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-regular fa-clock"></i>
+
+                            <div>
+                                <strong>Livre</strong>
+                                <span>Tempo</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="info-item">
+
+                            <i class="fa-solid fa-chart-simple"></i>
+
+                            <div>
+                                <strong>Resultado</strong>
+                                <span>Imediato</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="footer-info">
-                <span>📝 40 Questões aleatórias</span>
-                <span>⏱ Sem limite de tempo</span>
-            </div>
+
+            <!-- =================================================
+                 RODAPÉ
+            ================================================== -->
+
+            <footer class="inicio-footer">
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Avaliação de conhecimentos
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Responda cada questão com atenção
+                </span>
+
+            </footer>
+
         </div>
 
-        <!-- ========================================== -->
-        <!-- TELA DO QUIZ (Perguntas)                    -->
-        <!-- ========================================== -->
-        <div id="tela-quiz" class="tela fade-in">
-            <div class="header-quiz">
+    </section>
+
+
+
+    <!-- =====================================================
+         TELA DO QUIZ
+    ====================================================== -->
+
+    <section id="tela-quiz" class="tela">
+
+        <div class="quiz-container">
+
+            <!-- =================================================
+                 HEADER
+            ================================================== -->
+
+            <header class="quiz-header">
+
+                <div class="quiz-brand">
+
+                    <div class="small-brand-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                    <div>
+                        <strong>CodeQuiz</strong>
+                        <span>Programming Challenge</span>
+                    </div>
+
+                </div>
+
+
+                <!-- PARTICIPANTE -->
+
                 <div class="user-badge">
-                    <span>👤</span> <span id="nome-exibido">Aluno</span>
+
+                    <div class="user-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div class="user-info">
+
+                        <span>Participante</span>
+
+                        <strong id="nome-exibido">
+                            Aluno
+                        </strong>
+
+                    </div>
+
                 </div>
-                <div class="progress-badge">
-                    <span id="progresso">1 / 40</span>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 BARRA DE PROGRESSO
+            ================================================== -->
+
+            <div class="progress-section">
+
+                <div class="progress-info">
+
+                    <span>
+                        Progresso do Quiz
+                    </span>
+
+                    <strong id="progresso">
+                        1 / 40
+                    </strong>
+
                 </div>
+
+                <div class="progress-bar">
+
+                    <div
+                        id="barra-progresso"
+                        class="progress-fill"
+                        style="width: 2.5%;"
+                    ></div>
+
+                </div>
+
             </div>
-            
-            <div id="area-pergunta">
-                <div class="nivel-wrapper">
-                    <h3 id="nivel-atual" class="nivel-tag">Língua Portuguesa</h3>
+
+
+
+            <!-- =================================================
+                 ÁREA DA PERGUNTA
+            ================================================== -->
+
+            <main id="area-pergunta" class="question-area">
+
+
+                <!-- CATEGORIA -->
+
+                <div class="question-meta">
+
+                    <div class="nivel-wrapper">
+
+                        <span class="meta-label">
+                            <i class="fa-solid fa-layer-group"></i>
+                            Categoria
+                        </span>
+
+                        <h3
+                            id="nivel-atual"
+                            class="nivel-tag"
+                        >
+                            Programação
+                        </h3>
+
+                    </div>
+
+
+                    <div class="question-number">
+
+                        <i class="fa-solid fa-hashtag"></i>
+
+                        <span id="numero-questao">
+                            01
+                        </span>
+
+                    </div>
+
                 </div>
-                <p id="pergunta-texto" class="question-text">Carregando pergunta...</p>
-                
-                <div id="opcoes-container" class="options-grid"></div>
-                
-                <button id="btn-proximo" onclick="proximaPergunta()" class="btn-primary btn-next" style="display:none;">Próxima Pergunta →</button>
-            </div>
+
+
+
+                <!-- PERGUNTA -->
+
+                <div class="question-card">
+
+                    <div class="question-icon">
+
+                        <i class="fa-solid fa-terminal"></i>
+
+                    </div>
+
+                    <div class="question-content">
+
+                        <span class="question-label">
+                            QUESTÃO
+                        </span>
+
+                        <p
+                            id="pergunta-texto"
+                            class="question-text"
+                        >
+                            Carregando pergunta...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     OPÇÕES
+                ================================================== -->
+
+                <div
+                    id="opcoes-container"
+                    class="options-grid"
+                >
+                    <!-- As opções serão inseridas pelo JavaScript -->
+                </div>
+
+
+
+                <!-- =================================================
+                     BOTÃO PRÓXIMO
+                ================================================== -->
+
+                <div class="question-actions">
+
+                    <button
+                        id="btn-proximo"
+                        onclick="proximaPergunta()"
+                        class="btn-primary btn-next"
+                        style="display:none;"
+                    >
+
+                        <span>
+                            Próxima Questão
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </main>
+
+
+
+            <!-- =================================================
+                 RODAPÉ DO QUIZ
+            ================================================== -->
+
+            <footer class="quiz-footer">
+
+                <span>
+                    <i class="fa-solid fa-circle-info"></i>
+                    Selecione uma resposta para continuar
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-code"></i>
+                    CodeQuiz
+                </span>
+
+            </footer>
+
         </div>
 
-        <!-- ========================================== -->
-        <!-- TELA DE RESULTADO (Aluno)                   -->
-        <!-- ========================================== -->
-        <div id="tela-resultado" class="tela fade-in">
+    </section>
+
+
+
+    <!-- =====================================================
+         TELA DE RESULTADO
+    ====================================================== -->
+
+    <section id="tela-resultado" class="tela">
+
+        <div class="resultado-container">
+
+
+            <!-- =================================================
+                 CABEÇALHO
+            ================================================== -->
+
             <div class="result-header">
-                <div class="result-icon">🏆</div>
-                <h2>Resultado Final</h2>
+
+                <div class="result-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+                <span class="result-label">
+                    QUIZ CONCLUÍDO
+                </span>
+
+                <h2>
+                    Resultado Final
+                </h2>
+
+                <p id="resultado-nome" class="result-name">
+                </p>
+
             </div>
-            
-            <p id="resultado-nome" class="result-name"></p>
-            
+
+
+
+            <!-- =================================================
+                 RESULTADO PRINCIPAL
+            ================================================== -->
+
             <div class="resultado-box">
+
+
+                <!-- ACERTOS -->
+
                 <div class="stat-row">
-                    <span class="stat-label">✅ Acertos:</span>
-                    <span class="stat-value" id="acertos-final">0</span>
+
+                    <div class="stat-left">
+
+                        <div class="stat-icon success">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Acertos
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="stat-value"
+                        id="acertos-final"
+                    >
+                        0
+                    </strong>
+
                 </div>
+
+
+
+                <!-- TOTAL -->
+
                 <div class="stat-row">
-                    <span class="stat-label">📝 Total de Perguntas:</span>
-                    <span class="stat-value" id="total-final">0</span>
+
+                    <div class="stat-left">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-list-check"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Total de Questões
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="stat-value"
+                        id="total-final"
+                    >
+                        0
+                    </strong>
+
                 </div>
+
+
+
+                <!-- PERCENTAGEM -->
+
                 <div class="stat-row highlight">
-                    <span class="stat-label">📊 Percentagem:</span>
-                    <span class="stat-value" id="percentual-final">0%</span>
+
+                    <div class="stat-left">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-chart-pie"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Aproveitamento
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="stat-value"
+                        id="percentual-final"
+                    >
+                        0%
+                    </strong>
+
                 </div>
+
+
+
+                <!-- CLASSIFICAÇÃO -->
+
                 <div class="stat-row">
-                    <span class="stat-label">📈 Classificação:</span>
-                    <span class="stat-value" id="classificacao-final"></span>
+
+                    <div class="stat-left">
+
+                        <div class="stat-icon">
+
+                            <i class="fa-solid fa-medal"></i>
+
+                        </div>
+
+                        <span class="stat-label">
+                            Classificação
+                        </span>
+
+                    </div>
+
+                    <strong
+                        class="stat-value"
+                        id="classificacao-final"
+                    >
+                    </strong>
+
                 </div>
+
             </div>
-            
-            <div id="status-exame" class="status-box"></div>
-            
-            <button class="btn-primary" onclick="location.reload()">🔄 Refazer Teste</button>
+
+
+
+            <!-- =================================================
+                 STATUS
+            ================================================== -->
+
+            <div
+                id="status-exame"
+                class="status-box"
+            >
+            </div>
+
+
+
+            <!-- =================================================
+                 AÇÕES
+            ================================================== -->
+
+            <div class="result-actions">
+
+                <button
+                    class="btn-primary"
+                    onclick="location.reload()"
+                >
+
+                    <i class="fa-solid fa-rotate-right"></i>
+
+                    <span>
+                        Refazer Quiz
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="result-footer">
+
+                <span>
+                    <i class="fa-solid fa-code"></i>
+                    CodeQuiz
+                </span>
+
+                <span>
+                    Avaliação de Programação
+                </span>
+
+            </footer>
+
         </div>
 
-        <!-- ========================================== -->
-        <!-- TELA DO DASHBOARD (Admin - Layout Gestão)   -->
-        <!-- ========================================== -->
-        <div id="tela-admin" class="tela fade-in">
-            <div class="admin-header">
-                <div class="admin-title">
-                    <span class="admin-icon">🛡️</span>
-                    <h2>Painel de Controle</h2>
-                </div>
-                <button onclick="location.reload()" class="btn-exit">🚪 Sair</button>
-            </div>
-            
-            <div class="admin-stats">
-                <div class="stat-card" id="total-alunos-card">
-                    <span class="stat-number" id="total-alunos-count">0</span>
-                    <span class="stat-label">Total de Alunos</span>
-                </div>
-                <div class="stat-card" id="media-geral-card">
-                    <span class="stat-number" id="media-geral-count">0%</span>
-                    <span class="stat-label">Média Geral</span>
-                </div>
-            </div>
+    </section>
 
-            <div class="table-wrapper">
-                <div id="lista-alunos">
-                    <div class="loading-state">Carregando dados do servidor...</div>
+
+
+    <!-- =====================================================
+         TELA ADMINISTRATIVA
+    ====================================================== -->
+
+    <section id="tela-admin" class="tela">
+
+        <div class="admin-container">
+
+
+            <!-- =================================================
+                 HEADER ADMIN
+            ================================================== -->
+
+            <header class="admin-header">
+
+                <div class="admin-brand">
+
+                    <div class="admin-icon">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CODEQUIZ
+                        </span>
+
+                        <h2>
+                            Painel Administrativo
+                        </h2>
+
+                    </div>
+
                 </div>
-            </div>
+
+
+                <button
+                    onclick="location.reload()"
+                    class="btn-exit"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    <span>
+                        Sair
+                    </span>
+
+                </button>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 DASHBOARD
+            ================================================== -->
+
+            <main class="admin-content">
+
+
+                <!-- TÍTULO -->
+
+                <div class="dashboard-heading">
+
+                    <div>
+
+                        <span class="section-label">
+                            DASHBOARD
+                        </span>
+
+                        <h1>
+                            Visão geral
+                        </h1>
+
+                        <p>
+                            Acompanhe o desempenho dos participantes
+                            no quiz de programação.
+                        </p>
+
+                    </div>
+
+                    <div class="dashboard-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ESTATÍSTICAS
+                ================================================== -->
+
+                <div class="admin-stats">
+
+
+                    <!-- PARTICIPANTES -->
+
+                    <div
+                        class="stat-card"
+                        id="total-alunos-card"
+                    >
+
+                        <div class="stat-card-top">
+
+                            <div class="dashboard-stat-icon">
+
+                                <i class="fa-solid fa-users"></i>
+
+                            </div>
+
+                            <span class="stat-card-label">
+                                PARTICIPANTES
+                            </span>
+
+                        </div>
+
+                        <div
+                            class="stat-number"
+                            id="total-alunos-count"
+                        >
+                            0
+                        </div>
+
+                        <span class="stat-description">
+                            Total de participantes
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- MÉDIA -->
+
+                    <div
+                        class="stat-card"
+                        id="media-geral-card"
+                    >
+
+                        <div class="stat-card-top">
+
+                            <div class="dashboard-stat-icon">
+
+                                <i class="fa-solid fa-chart-column"></i>
+
+                            </div>
+
+                            <span class="stat-card-label">
+                                MÉDIA GERAL
+                            </span>
+
+                        </div>
+
+                        <div
+                            class="stat-number"
+                            id="media-geral-count"
+                        >
+                            0%
+                        </div>
+
+                        <span class="stat-description">
+                            Aproveitamento geral
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- QUESTÕES -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="dashboard-stat-icon">
+
+                                <i class="fa-solid fa-code"></i>
+
+                            </div>
+
+                            <span class="stat-card-label">
+                                QUESTÕES
+                            </span>
+
+                        </div>
+
+                        <div class="stat-number">
+                            40
+                        </div>
+
+                        <span class="stat-description">
+                            Questões disponíveis
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- CATEGORIA -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-top">
+
+                            <div class="dashboard-stat-icon">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                            </div>
+
+                            <span class="stat-card-label">
+                                ÁREA
+                            </span>
+
+                        </div>
+
+                        <div class="stat-number text-stat">
+                            DEV
+                        </div>
+
+                        <span class="stat-description">
+                            Programação
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     LISTA DE PARTICIPANTES
+                ================================================== -->
+
+                <div class="table-section">
+
+
+                    <div class="table-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                RESULTADOS
+                            </span>
+
+                            <h2>
+                                Participantes
+                            </h2>
+
+                        </div>
+
+
+                        <div class="table-header-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="table-wrapper">
+
+                        <div id="lista-alunos">
+
+                            <div class="loading-state">
+
+                                <div class="loading-icon">
+
+                                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                                </div>
+
+                                <span>
+                                    Carregando dados do servidor...
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </main>
+
+
+
+            <!-- =================================================
+                 FOOTER ADMIN
+            ================================================== -->
+
+            <footer class="admin-footer">
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Área administrativa
+                </span>
+
+                <span>
+                    CodeQuiz
+                </span>
+
+            </footer>
+
         </div>
 
-    </div>
+    </section>
 
-    <script src="script.js"></script>
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="script.js"></script>
+
 </body>
 </html>

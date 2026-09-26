@@ -1,87 +1,1280 @@
-/* Estilos Globais */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
-body { background: linear-gradient(135deg, #e0e7ff, #f0f4ff); display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+/* =========================================================
+   QUIZ DE PROGRAMAÇÃO
+   DESIGN PROFISSIONAL
+   ========================================================= */
 
-/* Container Principal */
-.container { 
-    background: white; width: 100%; max-width: 650px; padding: 40px; border-radius: 24px; 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: all 0.3s ease;
+
+/* =========================================================
+   VARIÁVEIS
+   ========================================================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --primary-light: #eff6ff;
+
+    --secondary: #0f172a;
+    --secondary-light: #1e293b;
+
+    --success: #16a34a;
+    --success-bg: #f0fdf4;
+
+    --danger: #dc2626;
+    --danger-bg: #fef2f2;
+
+    --warning: #d97706;
+    --warning-bg: #fffbeb;
+
+    --text: #0f172a;
+    --text-secondary: #475569;
+    --text-muted: #64748b;
+
+    --border: #e2e8f0;
+    --background: #f1f5f9;
+    --card: #ffffff;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+    --radius-xl: 24px;
+
+    --shadow-sm: 0 2px 6px rgba(15, 23, 42, 0.05);
+    --shadow-md: 0 8px 25px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.12);
 }
 
-/* Telas */
-.tela { display: none; flex-direction: column; gap: 25px; }
-.tela.active { display: flex; }
-.fade-in { animation: fadeIn 0.4s ease-in-out; }
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-/* =========== TELA DE INÍCIO =========== */
-.logo-area { text-align: center; margin-bottom: 10px; }
-.icon-box { font-size: 50px; margin-bottom: 10px; }
-.logo-area h1 { font-size: 28px; color: #1a202c; font-weight: 700; letter-spacing: -0.5px; }
-.subtitle { color: #718096; font-size: 16px; margin-top: 5px; }
+/* =========================================================
+   RESET
+   ========================================================= */
 
-.input-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-.input-group label { font-weight: 600; color: #2d3748; font-size: 14px; }
-input { width: 100%; padding: 14px; border: 2px solid #e2e8f0; border-radius: 12px; font-size: 16px; outline: none; transition: 0.3s; }
-input:focus { border-color: #4f46e5; box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1); }
-
-.btn-primary { 
-    width: 100%; padding: 16px; background: #4f46e5; color: white; border: none; border-radius: 12px; 
-    font-size: 16px; font-weight: 600; cursor: pointer; transition: 0.3s; letter-spacing: 1px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.btn-primary:hover { background: #4338ca; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4); }
 
-.footer-info { display: flex; justify-content: space-between; color: #a0aec0; font-size: 13px; margin-top: 10px; border-top: 1px solid #edf2f7; padding-top: 15px; }
+html {
+    scroll-behavior: smooth;
+}
 
-/* =========== TELA DO QUIZ =========== */
-.header-quiz { display: flex; justify-content: space-between; background: #f7fafc; padding: 15px; border-radius: 12px; }
-.user-badge, .progress-badge { background: white; padding: 5px 15px; border-radius: 20px; font-weight: 500; color: #4a5568; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.nivel-wrapper { margin-bottom: 15px; }
-.nivel-tag { background: #e2e8f0; color: #2d3748; padding: 6px 16px; border-radius: 20px; display: inline-block; font-size: 13px; font-weight: 600; }
-.question-text { font-size: 18px; font-weight: 500; color: #1a202c; line-height: 1.6; margin-bottom: 20px; }
+body {
+    font-family: "Roboto", sans-serif;
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37, 99, 235, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(59, 130, 246, 0.08),
+            transparent 35%
+        ),
+        var(--background);
 
-.options-grid { display: flex; flex-direction: column; gap: 12px; margin-top: 5px; }
-.opcao-btn { background: #f7fafc; border: 2px solid #e2e8f0; color: #2d3748; text-align: left; padding: 14px; border-radius: 12px; font-size: 15px; cursor: pointer; transition: 0.2s; }
-.opcao-btn:hover:not(:disabled) { background: #edf2f7; border-color: #a0aec0; }
-.opcao-btn.correct { background: #c6f6d5; border-color: #48bb78; color: #22543d; }
-.opcao-btn.wrong { background: #fed7d7; border-color: #fc8181; color: #9b2c2c; }
+    color: var(--text);
 
-.btn-next { margin-top: 25px; }
+    min-height: 100vh;
 
-/* =========== TELA DE RESULTADO =========== */
-.result-header { text-align: center; margin-bottom: 10px; }
-.result-icon { font-size: 60px; display: block; margin-bottom: 5px; }
-.result-name { text-align: center; font-size: 20px; font-weight: 600; color: #1a202c; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.resultado-box { background: #f7fafc; padding: 25px; border-radius: 16px; }
-.stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #edf2f7; font-size: 16px; }
-.stat-row:last-child { border-bottom: none; }
-.stat-row.highlight .stat-value { color: #4f46e5; font-weight: 700; font-size: 18px; }
-.stat-label { color: #4a5568; }
-.stat-value { font-weight: 500; color: #2d3748; }
+    padding: 30px;
+}
 
-.status-box { padding: 15px; border-radius: 12px; text-align: center; font-weight: 600; margin-top: 5px; }
-.status-box.aprovado { background: #c6f6d5; color: #22543d; border: 1px solid #9ae6b4; }
-.status-box.reprovado { background: #fed7d7; color: #9b2c2c; border: 1px solid #feb2b2; }
 
-/* =========== DASHBOARD DO ADMIN =========== */
-.admin-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #edf2f7; padding-bottom: 15px; }
-.admin-title { display: flex; align-items: center; gap: 10px; }
-.admin-title h2 { color: #1a202c; margin: 0; }
-.admin-icon { font-size: 24px; }
-.btn-exit { background: none; border: 1px solid #e2e8f0; color: #718096; padding: 8px 20px; border-radius: 8px; cursor: pointer; transition: 0.3s; font-weight: 600; margin: 0; width: auto;}
-.btn-exit:hover { background: #f7fafc; border-color: #a0aec0; }
+/* =========================================================
+   CONTAINER PRINCIPAL
+   ========================================================= */
 
-.admin-stats { display: flex; gap: 15px; margin-top: 10px; }
-.stat-card { flex: 1; background: #f7fafc; text-align: center; padding: 20px; border-radius: 12px; border: 1px solid #edf2f7; }
-.stat-card .stat-number { display: block; font-size: 28px; font-weight: 700; color: #4f46e5; }
-.stat-card .stat-label { color: #718096; font-size: 14px; margin-top: 5px; display: block; }
+.container {
+    width: 100%;
+    max-width: 850px;
 
-.table-wrapper { margin-top: 15px; border: 1px solid #e2e8f0; border-radius: 12px; overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 400px;}
-th { background: #f7fafc; color: #4a5568; font-weight: 600; padding: 15px; text-align: left; border-bottom: 2px solid #e2e8f0; }
-td { padding: 15px; border-bottom: 1px solid #edf2f7; color: #2d3748; }
-tr:last-child td { border-bottom: none; }
-tr:hover { background: #fafbff; }
+    background: var(--card);
 
-.loading-state { padding: 40px; text-align: center; color: #a0aec0; font-size: 15px; }
+    border: 1px solid rgba(226, 232, 240, 0.9);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-lg);
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   TELAS
+   ========================================================= */
+
+.tela {
+    display: none;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding: 45px;
+}
+
+.tela.active {
+    display: flex;
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   TELA INICIAL
+   ========================================================= */
+
+.logo-area {
+    text-align: center;
+
+    padding: 15px 0 10px;
+}
+
+
+/* ÍCONE PRINCIPAL */
+
+.icon-box {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        #3b82f6
+    );
+
+    color: white;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+/* TÍTULO */
+
+.logo-area h1 {
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.8px;
+
+    color: var(--secondary);
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.form-area {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    color: var(--text);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+
+    padding: 16px 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+
+    background: #f8fafc;
+
+    color: var(--text);
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:hover {
+    border-color: #cbd5e1;
+}
+
+input:focus {
+    background: white;
+
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   BOTÕES
+   ========================================================= */
+
+.btn-primary {
+    width: 100%;
+
+    border: none;
+
+    padding: 16px 20px;
+
+    border-radius: var(--radius-md);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #3b82f6
+        );
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.20);
+}
+
+.btn-primary:hover {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 24px rgba(37, 99, 235, 0.28);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+
+/* ÍCONES DOS BOTÕES */
+
+.btn-primary i {
+    margin-right: 8px;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO QUIZ
+   ========================================================= */
+
+.footer-info {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+
+    margin-top: 5px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+.footer-info span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.footer-info i {
+    color: var(--primary);
+}
+
+
+/* =========================================================
+   TELA DO QUIZ
+   ========================================================= */
+
+#tela-quiz {
+    padding: 35px 45px 45px;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO QUIZ
+   ========================================================= */
+
+.header-quiz {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-md);
+}
+
+
+/* USUÁRIO */
+
+.user-badge,
+.progress-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    background: white;
+
+    padding: 9px 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 30px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    box-shadow: var(--shadow-sm);
+}
+
+.user-badge i {
+    color: var(--primary);
+}
+
+.progress-badge {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   ÁREA DA PERGUNTA
+   ========================================================= */
+
+#area-pergunta {
+    padding-top: 5px;
+}
+
+
+/* CATEGORIA */
+
+.nivel-wrapper {
+    margin-bottom: 18px;
+}
+
+.nivel-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    background: var(--primary-light);
+
+    border: 1px solid #bfdbfe;
+
+    color: var(--primary-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.nivel-tag i {
+    font-size: 12px;
+}
+
+
+/* PERGUNTA */
+
+.question-text {
+    color: var(--text);
+
+    font-size: 21px;
+
+    font-weight: 600;
+
+    line-height: 1.55;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   OPÇÕES
+   ========================================================= */
+
+.options-grid {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 5px;
+}
+
+.opcao-btn {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    text-align: left;
+
+    position: relative;
+
+    padding: 16px 18px;
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* LETRA DA ALTERNATIVA */
+
+.opcao-btn::before {
+    content: "";
+
+    width: 30px;
+    height: 30px;
+
+    flex-shrink: 0;
+
+    margin-right: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+
+    color: var(--text-secondary);
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+/*
+   As letras são definidas pela ordem
+*/
+
+.opcao-btn:nth-child(1)::before {
+    content: "A";
+}
+
+.opcao-btn:nth-child(2)::before {
+    content: "B";
+}
+
+.opcao-btn:nth-child(3)::before {
+    content: "C";
+}
+
+.opcao-btn:nth-child(4)::before {
+    content: "D";
+}
+
+.opcao-btn:nth-child(5)::before {
+    content: "E";
+}
+
+
+/* HOVER */
+
+.opcao-btn:hover:not(:disabled) {
+    border-color: #93c5fd;
+
+    background: #f8fbff;
+
+    transform: translateX(3px);
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* RESPOSTA CORRETA */
+
+.opcao-btn.correct {
+    background: var(--success-bg);
+
+    border-color: #86efac;
+
+    color: #166534;
+}
+
+.opcao-btn.correct::before {
+    background: #dcfce7;
+
+    color: var(--success);
+}
+
+
+/* RESPOSTA ERRADA */
+
+.opcao-btn.wrong {
+    background: var(--danger-bg);
+
+    border-color: #fca5a5;
+
+    color: #991b1b;
+}
+
+.opcao-btn.wrong::before {
+    background: #fee2e2;
+
+    color: var(--danger);
+}
+
+
+/* DESABILITADO */
+
+.opcao-btn:disabled {
+    cursor: default;
+}
+
+
+/* =========================================================
+   BOTÃO PRÓXIMA PERGUNTA
+   ========================================================= */
+
+.btn-next {
+    margin-top: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+
+/* =========================================================
+   TELA DE RESULTADO
+   ========================================================= */
+
+.result-header {
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+
+/* ÍCONE DO RESULTADO */
+
+.result-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 32px;
+}
+
+.result-header h2 {
+    font-size: 28px;
+
+    color: var(--secondary);
+
+    margin-bottom: 5px;
+}
+
+.result-name {
+    text-align: center;
+
+    font-size: 16px;
+
+    color: var(--text-secondary);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.resultado-box {
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    padding: 22px;
+
+    border-radius: var(--radius-lg);
+}
+
+.stat-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 15px;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.stat-value {
+    color: var(--text);
+
+    font-weight: 700;
+}
+
+.stat-row.highlight {
+    margin-top: 5px;
+
+    padding: 17px;
+
+    border-radius: var(--radius-md);
+
+    background: var(--primary-light);
+
+    border: none;
+}
+
+.stat-row.highlight .stat-value {
+    color: var(--primary);
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.status-box {
+    padding: 16px;
+
+    border-radius: var(--radius-md);
+
+    text-align: center;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+.status-box.aprovado {
+    background: var(--success-bg);
+
+    color: #166534;
+
+    border: 1px solid #bbf7d0;
+}
+
+.status-box.reprovado {
+    background: var(--danger-bg);
+
+    color: #991b1b;
+
+    border: 1px solid #fecaca;
+}
+
+
+/* =========================================================
+   DASHBOARD ADMINISTRATIVO
+   ========================================================= */
+
+#tela-admin {
+    padding: 35px;
+}
+
+
+/* CABEÇALHO */
+
+.admin-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.admin-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.admin-icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    font-size: 19px;
+}
+
+.admin-title h2 {
+    color: var(--secondary);
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* BOTÃO SAIR */
+
+.btn-exit {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    width: auto;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    color: var(--text-secondary);
+
+    padding: 9px 16px;
+
+    border-radius: var(--radius-md);
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+.btn-exit:hover {
+    background: #f8fafc;
+
+    border-color: #cbd5e1;
+
+    color: var(--danger);
+}
+
+
+/* =========================================================
+   CARDS DE ESTATÍSTICAS
+   ========================================================= */
+
+.admin-stats {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+.stat-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    box-shadow: var(--shadow-sm);
+
+    transition: 0.25s ease;
+}
+
+.stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 4px;
+
+    background: var(--primary);
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card .stat-number {
+    display: block;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+    margin-bottom: 5px;
+}
+
+.stat-card .stat-label {
+    display: block;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   TABELA
+   ========================================================= */
+
+.table-wrapper {
+    margin-top: 25px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    overflow-x: auto;
+
+    background: white;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 600px;
+
+    font-size: 14px;
+}
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    padding: 14px 16px;
+
+    text-align: left;
+
+    color: var(--text-secondary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    padding: 15px 16px;
+
+    color: var(--text-secondary);
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tbody tr {
+    transition: 0.15s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ESTADO DE CARREGAMENTO
+   ========================================================= */
+
+.loading-state {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+}
+
+.loading-state i {
+    display: block;
+
+    font-size: 25px;
+
+    color: var(--primary);
+
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        border-radius: 18px;
+    }
+
+    .tela {
+        padding: 30px 22px;
+    }
+
+    #tela-quiz {
+        padding: 25px 22px 30px;
+    }
+
+    #tela-admin {
+        padding: 25px 20px;
+    }
+
+    .logo-area h1 {
+        font-size: 27px;
+    }
+
+    .question-text {
+        font-size: 18px;
+    }
+
+    .header-quiz {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .user-badge,
+    .progress-badge {
+        justify-content: center;
+    }
+
+    .admin-header {
+        align-items: flex-start;
+    }
+
+    .admin-title h2 {
+        font-size: 18px;
+    }
+
+    .admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-info {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        border-radius: 15px;
+    }
+
+    .tela {
+        padding: 25px 17px;
+    }
+
+    #tela-quiz {
+        padding: 20px 17px 25px;
+    }
+
+    #tela-admin {
+        padding: 20px 15px;
+    }
+
+    .icon-box {
+        width: 65px;
+        height: 65px;
+
+        font-size: 27px;
+    }
+
+    .logo-area h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .question-text {
+        font-size: 17px;
+    }
+
+    .opcao-btn {
+        padding: 13px;
+        font-size: 14px;
+    }
+
+    .opcao-btn::before {
+        width: 27px;
+        height: 27px;
+
+        margin-right: 10px;
+    }
+
+    .resultado-box {
+        padding: 16px;
+    }
+
+    .stat-row {
+        font-size: 14px;
+    }
+
+    .admin-header {
+        flex-direction: column;
+    }
+
+    .btn-exit {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+   ========================================================= */
+
+::selection {
+    background: #bfdbfe;
+
+    color: #1e3a8a;
+}
