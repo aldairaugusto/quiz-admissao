@@ -9,52 +9,64 @@
 const todasPerguntas = [
 
     // =============================================================
-    // 1. FUNDAMENTOS DE PROGRAMAÇÃO
+    // 1. FUNDAMENTOS E LÓGICA
     // =============================================================
 
     {
         nivel: "Fundamentos",
-        pergunta: "O que é um algoritmo?",
+        pergunta: "Qual será o valor de x após executar: x = 7; x = x + 5?",
         opcoes: [
-            "Um tipo de computador",
-            "Uma sequência de passos para resolver um problema",
-            "Um sistema operacional",
-            "Uma linguagem de programação"
+            "2",
+            "12",
+            "35",
+            "7"
         ],
         correta: 1
     },
 
     {
         nivel: "Fundamentos",
-        pergunta: "Qual destas opções representa uma variável?",
+        pergunta: "O que é uma variável?",
         opcoes: [
-            "Uma caixa que armazena um valor que pode mudar",
-            "Um computador inteiro",
+            "Um espaço usado para armazenar um valor",
+            "Um tipo de computador",
             "Um programa compilado",
-            "Um arquivo de texto"
+            "Um erro de programação"
         ],
         correta: 0
     },
 
     {
         nivel: "Fundamentos",
-        pergunta: "Qual é a principal finalidade de uma estrutura condicional?",
+        pergunta: "Se x = 10 e y = 3, qual será o resultado de x % y?",
         opcoes: [
-            "Repetir código infinitamente",
-            "Armazenar vários valores",
-            "Executar diferentes instruções dependendo de uma condição",
-            "Criar um arquivo"
+            "3",
+            "0",
+            "1",
+            "3.33"
         ],
         correta: 2
     },
 
     {
         nivel: "Fundamentos",
-        pergunta: "Qual estrutura normalmente é utilizada para repetir um bloco de código enquanto uma condição for verdadeira?",
+        pergunta: "Qual será o resultado de 4 + 3 * 2?",
         opcoes: [
+            "14",
+            "10",
+            "8",
+            "7"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Fundamentos",
+        pergunta: "Qual estrutura é utilizada para tomar uma decisão baseada em uma condição?",
+        opcoes: [
+            "for",
             "if",
-            "while",
-            "switch",
+            "array",
             "return"
         ],
         correta: 1
@@ -62,112 +74,350 @@ const todasPerguntas = [
 
     {
         nivel: "Fundamentos",
-        pergunta: "O que significa depurar um programa?",
+        pergunta: "Qual destes valores representa normalmente uma condição verdadeira?",
         opcoes: [
-            "Compilar o programa",
-            "Criar uma nova linguagem",
-            "Encontrar e corrigir erros no programa",
-            "Apagar o programa"
+            "true",
+            "null",
+            "false",
+            "void"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "Fundamentos",
+        pergunta: "O que acontece normalmente quando uma condição de um if é falsa?",
+        opcoes: [
+            "O computador desliga",
+            "O programa obrigatoriamente dá erro",
+            "O bloco associado ao if não é executado",
+            "O programa reinicia"
         ],
         correta: 2
     },
 
     {
         nivel: "Fundamentos",
-        pergunta: "O que é um erro de sintaxe?",
+        pergunta: "Qual é a principal finalidade de um loop?",
         opcoes: [
-            "Um erro causado por falta de memória",
-            "Um erro na escrita que viola as regras da linguagem",
-            "Um resultado matemático errado",
-            "Um erro de hardware"
+            "Repetir instruções",
+            "Criar um sistema operacional",
+            "Apagar variáveis",
+            "Compilar HTML"
+        ],
+        correta: 0
+    },
+
+
+    // =============================================================
+    // 2. PYTHON
+    // =============================================================
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = [1, 2, 3]; x.insert(1, 10); print(x)`",
+        opcoes: [
+            "[10, 1, 2, 3]",
+            "[1, 10, 2, 3]",
+            "[1, 2, 10, 3]",
+            "Error"
         ],
         correta: 1
     },
 
     {
-        nivel: "Fundamentos",
-        pergunta: "Qual é a função de uma variável booleana?",
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = 10; def teste(): x = 5; teste(); print(x)`",
         opcoes: [
-            "Armazenar apenas números reais",
-            "Armazenar textos longos",
-            "Armazenar valores verdadeiro ou falso",
-            "Armazenar arquivos"
+            "5",
+            "15",
+            "Error",
+            "10"
+        ],
+        correta: 3
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `print(2 ** 3)`",
+        opcoes: [
+            "6",
+            "8",
+            "9",
+            "5"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = [10, 20, 30]; print(x[1])`",
+        opcoes: [
+            "10",
+            "20",
+            "30",
+            "Error"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = [1, 2, 3]; print(x[-1])`",
+        opcoes: [
+            "1",
+            "2",
+            "3",
+            "Error"
         ],
         correta: 2
     },
 
     {
-        nivel: "Fundamentos",
-        pergunta: "O que significa IDE?",
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = 5; y = 2; print(x // y)`",
         opcoes: [
-            "Integrated Development Environment",
-            "Internet Data Engine",
-            "Internal Developer Extension",
-            "Integrated Database Editor"
+            "2",
+            "2.5",
+            "3",
+            "1"
         ],
         correta: 0
     },
 
     {
-        nivel: "Fundamentos",
-        pergunta: "Qual destas é uma linguagem de programação?",
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = 10; print(x > 5 and x < 20)`",
         opcoes: [
-            "HTML",
-            "CSS",
-            "C++",
-            "HTTP"
+            "False",
+            "10",
+            "True",
+            "Error"
         ],
         correta: 2
     },
 
     {
-        nivel: "Fundamentos",
-        pergunta: "Qual é a finalidade de uma função?",
+        nivel: "Python",
+        pergunta: "Qual será a saída? `for i in range(3): print(i)`",
         opcoes: [
-            "Organizar e reutilizar um conjunto de instruções",
-            "Aumentar fisicamente a memória RAM",
-            "Substituir o sistema operacional",
-            "Criar necessariamente uma classe"
+            "1 2 3",
+            "0 1 2",
+            "0 1 2 3",
+            "3 2 1"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = [1, 2, 3]; x.append(4); print(len(x))`",
+        opcoes: [
+            "3",
+            "4",
+            "5",
+            "Error"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `def f(n): if n == 0: return 1; return n * f(n-1); print(f(3))`",
+        opcoes: [
+            "3",
+            "6",
+            "9",
+            "1"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "O que será impresso? `x = 5; if x > 3: print(\"A\"); else: print(\"B\")`",
+        opcoes: [
+            "A",
+            "B",
+            "AB",
+            "Error"
         ],
         correta: 0
     },
 
+    {
+        nivel: "Python",
+        pergunta: "Qual função converte uma string para um número inteiro em Python?",
+        opcoes: [
+            "str()",
+            "float()",
+            "int()",
+            "number()"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `print(len(\"Python\"))`",
+        opcoes: [
+            "5",
+            "6",
+            "7",
+            "Python"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Python",
+        pergunta: "Qual será a saída? `x = [1, 2, 3, 4]; print(x[1:3])`",
+        opcoes: [
+            "[1, 2]",
+            "[2, 3]",
+            "[2, 3, 4]",
+            "[1, 2, 3]"
+        ],
+        correta: 1
+    },
+
 
     // =============================================================
-    // 2. C++
+    // 3. C
     // =============================================================
 
     {
-        nivel: "C++",
-        pergunta: "Qual função é o ponto de entrada de um programa C++ tradicional?",
+        nivel: "C",
+        pergunta: "Qual função é normalmente o ponto de entrada de um programa em C?",
         opcoes: [
             "start()",
             "main()",
-            "run()",
-            "program()"
+            "begin()",
+            "run()"
         ],
         correta: 1
     },
 
     {
-        nivel: "C++",
-        pergunta: "Qual símbolo é utilizado para terminar normalmente uma instrução em C++?",
+        nivel: "C",
+        pergunta: "Qual será a saída? `int x = 5; printf(\"%d\", x + 3);`",
         opcoes: [
-            ":",
-            ".",
-            ";",
-            ","
+            "5",
+            "3",
+            "8",
+            "53"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual especificador é usado com printf para imprimir um inteiro?",
+        opcoes: [
+            "%s",
+            "%f",
+            "%d",
+            "%c"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual será o resultado de `10 % 4` em C?",
+        opcoes: [
+            "2",
+            "2.5",
+            "4",
+            "1"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual biblioteca é necessária para utilizar printf()?",
+        opcoes: [
+            "<math.h>",
+            "<stdio.h>",
+            "<string.h>",
+            "<stdlib.cpp>"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual será a saída? `int x = 3; x++; printf(\"%d\", x);`",
+        opcoes: [
+            "2",
+            "3",
+            "4",
+            "6"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual operador obtém o endereço de uma variável em C?",
+        opcoes: [
+            "*",
+            "&",
+            "#",
+            "%"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual operador é utilizado para acessar o valor armazenado no endereço apontado por um ponteiro?",
+        opcoes: [
+            "&",
+            "*",
+            "->",
+            "#"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "C",
+        pergunta: "Qual será a saída? `int x = 10; if(x % 2 == 0) printf(\"Par\"); else printf(\"Impar\");`",
+        opcoes: [
+            "Impar",
+            "Par",
+            "10",
+            "Error"
+        ],
+        correta: 1
+    },
+
+
+    // =============================================================
+    // 4. C++
+    // =============================================================
+
+    {
+        nivel: "C++",
+        pergunta: "Qual será a saída? `int x = 4; cout << x * 2;`",
+        opcoes: [
+            "4",
+            "6",
+            "8",
+            "16"
         ],
         correta: 2
     },
 
     {
         nivel: "C++",
-        pergunta: "Qual biblioteca é normalmente utilizada para entrada e saída com cin e cout?",
+        pergunta: "Qual biblioteca fornece `cout` e `cin`?",
         opcoes: [
-            "<string>",
-            "<iostream>",
             "<vector>",
+            "<iostream>",
+            "<string>",
             "<algorithm>"
         ],
         correta: 1
@@ -175,264 +425,774 @@ const todasPerguntas = [
 
     {
         nivel: "C++",
-        pergunta: "Qual comando imprime dados no console em C++?",
+        pergunta: "Qual será a saída? `int x = 5; cout << ++x;`",
         opcoes: [
-            "print",
-            "console.log",
-            "cout",
-            "echo"
+            "4",
+            "5",
+            "6",
+            "7"
         ],
         correta: 2
     },
 
     {
         nivel: "C++",
-        pergunta: "Qual comando é utilizado para receber dados do utilizador em C++?",
-        opcoes: [
-            "cin",
-            "input",
-            "read",
-            "scanf_only"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual tipo normalmente representa números inteiros em C++?",
-        opcoes: [
-            "string",
-            "int",
-            "bool",
-            "char"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual tipo é utilizado para armazenar números com casas decimais?",
-        opcoes: [
-            "int",
-            "bool",
-            "double",
-            "char"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual tipo armazena um único caractere?",
-        opcoes: [
-            "char",
-            "string",
-            "int",
-            "double"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual biblioteca fornece std::vector?",
-        opcoes: [
-            "<queue>",
-            "<vector>",
-            "<array>",
-            "<list>"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual é a forma correta de declarar um vetor de 5 inteiros?",
-        opcoes: [
-            "int vetor(5);",
-            "int vetor[5];",
-            "vector int[5];",
-            "array int vetor;"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual operador é utilizado para comparação de igualdade em C++?",
-        opcoes: [
-            "=",
-            "==",
-            "===",
-            "!="
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual operador representa 'diferente de'?",
-        opcoes: [
-            "<>",
-            "!=",
-            "!==",
-            "not="
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual operador representa AND lógico em C++?",
-        opcoes: [
-            "||",
-            "&&",
-            "!",
-            "&"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual operador representa OR lógico?",
-        opcoes: [
-            "&&",
-            "||",
-            "!",
-            "^"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "O que o operador ++ faz?",
-        opcoes: [
-            "Diminui uma variável",
-            "Multiplica por dois",
-            "Incrementa uma unidade",
-            "Zera a variável"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual palavra-chave é utilizada para retornar um valor de uma função?",
-        opcoes: [
-            "send",
-            "return",
-            "output",
-            "break"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual palavra-chave é usada para declarar uma constante?",
-        opcoes: [
-            "fixed",
-            "constant",
-            "const",
-            "static_value"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual estrutura é usada para escolher entre vários casos?",
-        opcoes: [
-            "switch",
-            "repeat",
-            "select_case_only",
-            "choose"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual palavra-chave interrompe imediatamente um loop?",
-        opcoes: [
-            "stop",
-            "exit_loop",
-            "break",
-            "end"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "C++",
-        pergunta: "Qual palavra-chave pula para a próxima iteração de um loop?",
-        opcoes: [
-            "skip",
-            "continue",
-            "next",
-            "pass"
-        ],
-        correta: 1
-    },
-
-
-    // =============================================================
-    // 3. LÓGICA E ALGORITMOS
-    // =============================================================
-
-    {
-        nivel: "Algoritmos",
-        pergunta: "Qual será o valor de x após: int x = 5; x = x + 3;?",
+        pergunta: "Qual será a saída? `vector<int> v = {1,2,3}; v.push_back(4); cout << v.size();`",
         opcoes: [
             "3",
+            "4",
             "5",
-            "8",
-            "15"
+            "Error"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "C++",
+        pergunta: "Qual será a saída? `int x = 10; int y = 3; cout << x / y;`",
+        opcoes: [
+            "3",
+            "3.33",
+            "1",
+            "4"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "C++",
+        pergunta: "Qual será a saída? `string s = \"Code\"; cout << s[0];`",
+        opcoes: [
+            "C",
+            "o",
+            "Code",
+            "0"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "C++",
+        pergunta: "Qual container segue o princípio LIFO?",
+        opcoes: [
+            "queue",
+            "vector",
+            "stack",
+            "map"
         ],
         correta: 2
     },
 
     {
+        nivel: "C++",
+        pergunta: "Qual container segue o princípio FIFO?",
+        opcoes: [
+            "stack",
+            "queue",
+            "set",
+            "map"
+        ],
+        correta: 1
+    },
+
+
+    // =============================================================
+    // 5. HTML
+    // =============================================================
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual linguagem é usada principalmente para estruturar uma página web?",
+        opcoes: [
+            "CSS",
+            "HTML",
+            "Python",
+            "SQL"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual tag representa o maior título normalmente utilizado em HTML?",
+        opcoes: [
+            "<title>",
+            "<h6>",
+            "<header>",
+            "<h1>"
+        ],
+        correta: 3
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual tag cria um link para outra página?",
+        opcoes: [
+            "<link>",
+            "<a>",
+            "<url>",
+            "<href>"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual atributo define o destino de um link criado com `<a>`?",
+        opcoes: [
+            "src",
+            "href",
+            "link",
+            "target-url"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual tag é utilizada para inserir uma imagem?",
+        opcoes: [
+            "<image>",
+            "<picture>",
+            "<img>",
+            "<src>"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual tag é utilizada para criar um campo de entrada de texto?",
+        opcoes: [
+            "<input>",
+            "<text>",
+            "<field>",
+            "<textbox>"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual será o texto exibido pelo navegador? `<p>Olá mundo!</p>`",
+        opcoes: [
+            "p",
+            "Olá mundo!",
+            "<p>Olá mundo!</p>",
+            "Nada"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "HTML",
+        pergunta: "Qual atributo fornece um texto alternativo para uma imagem?",
+        opcoes: [
+            "title",
+            "src",
+            "alt",
+            "text"
+        ],
+        correta: 2
+    },
+
+
+    // =============================================================
+    // 6. CSS
+    // =============================================================
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual é a principal finalidade do CSS?",
+        opcoes: [
+            "Criar bancos de dados",
+            "Estruturar algoritmos",
+            "Estilizar elementos de uma página",
+            "Compilar JavaScript"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual propriedade altera a cor do texto?",
+        opcoes: [
+            "background",
+            "font-color",
+            "color",
+            "text-style"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual propriedade altera a cor de fundo de um elemento?",
+        opcoes: [
+            "background-color",
+            "color-background",
+            "bg",
+            "background-style"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual propriedade aumenta o espaço interno de um elemento?",
+        opcoes: [
+            "margin",
+            "padding",
+            "spacing",
+            "border-space"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual propriedade controla o espaço externo de um elemento?",
+        opcoes: [
+            "padding",
+            "border",
+            "margin",
+            "gap-only"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual seletor seleciona um elemento com `id=\"menu\"`?",
+        opcoes: [
+            ".menu",
+            "#menu",
+            "menu",
+            "*menu"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual seletor seleciona elementos que possuem a classe `card`?",
+        opcoes: [
+            "#card",
+            "card",
+            ".card",
+            "@card"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual propriedade transforma um elemento em um container flexível?",
+        opcoes: [
+            "position: flex",
+            "display: flex",
+            "flex: display",
+            "layout: flex"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "CSS",
+        pergunta: "Qual será a largura final do conteúdo se um elemento tiver `width: 200px` e `padding: 20px` em cada lado, usando box-sizing padrão?",
+        opcoes: [
+            "200px",
+            "220px",
+            "240px",
+            "160px"
+        ],
+        correta: 2
+    },
+
+
+    // =============================================================
+    // 7. MATEMÁTICA
+    // =============================================================
+
+    {
+        nivel: "Matemática",
+        pergunta: "Quanto é 15 + 27?",
+        opcoes: [
+            "32",
+            "40",
+            "42",
+            "45"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Quanto é 12 × 8?",
+        opcoes: [
+            "86",
+            "96",
+            "108",
+            "92"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Quanto é 144 ÷ 12?",
+        opcoes: [
+            "10",
+            "11",
+            "12",
+            "14"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Qual é o resultado de 2⁵?",
+        opcoes: [
+            "10",
+            "16",
+            "25",
+            "32"
+        ],
+        correta: 3
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Se x + 7 = 15, qual é o valor de x?",
+        opcoes: [
+            "7",
+            "8",
+            "9",
+            "22"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Qual é a média de 10, 20 e 30?",
+        opcoes: [
+            "15",
+            "20",
+            "25",
+            "30"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Um produto custa 20.000 Kz e recebe um desconto de 10%. Qual será o novo preço?",
+        opcoes: [
+            "18.000 Kz",
+            "19.000 Kz",
+            "17.000 Kz",
+            "10.000 Kz"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Qual é o próximo número da sequência: 2, 4, 8, 16, ...?",
+        opcoes: [
+            "20",
+            "24",
+            "32",
+            "30"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Qual é a área de um quadrado com lado igual a 6 cm?",
+        opcoes: [
+            "12 cm²",
+            "24 cm²",
+            "36 cm²",
+            "42 cm²"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Matemática",
+        pergunta: "Se um carro percorre 120 km em 2 horas, qual é sua velocidade média?",
+        opcoes: [
+            "40 km/h",
+            "50 km/h",
+            "60 km/h",
+            "80 km/h"
+        ],
+        correta: 2
+    },
+
+
+    // =============================================================
+    // 8. LÓGICA MATEMÁTICA / PROGRAMAÇÃO
+    // =============================================================
+
+    {
+        nivel: "Lógica",
+        pergunta: "Se x = 8, qual será o resultado de `x % 2 == 0`?",
+        opcoes: [
+            "False",
+            "8",
+            "True",
+            "0"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Qual número completa a sequência: 3, 6, 9, 12, ?",
+        opcoes: [
+            "14",
+            "15",
+            "16",
+            "18"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Se A é maior que B e B é maior que C, então:",
+        opcoes: [
+            "C é maior que A",
+            "A é maior que C",
+            "A é igual a C",
+            "Não podemos comparar A e C"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Qual será o valor de x? `x = 2; x = x * 3; x = x + 4`",
+        opcoes: [
+            "10",
+            "12",
+            "8",
+            "6"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Um algoritmo começa com x = 10. A cada passo x é dividido por 2. Após dois passos, qual será o valor de x?",
+        opcoes: [
+            "2.5",
+            "5",
+            "10",
+            "20"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Se um programa executa `x = 5`, depois `x = x + 5`, e finalmente `x = x * 2`, qual será o resultado?",
+        opcoes: [
+            "15",
+            "20",
+            "25",
+            "10"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Qual condição verifica se x está entre 10 e 20, incluindo os extremos?",
+        opcoes: [
+            "x > 10 || x < 20",
+            "x >= 10 && x <= 20",
+            "x > 10 && x > 20",
+            "x == 10 || x == 20"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Lógica",
+        pergunta: "Qual será o resultado de `!(5 > 2)` em uma linguagem que utiliza ! como NOT lógico?",
+        opcoes: [
+            "True",
+            "5",
+            "False",
+            "2"
+        ],
+        correta: 2
+    },
+
+
+    // =============================================================
+    // 9. ALGORITMOS
+    // =============================================================
+
+    {
         nivel: "Algoritmos",
-        pergunta: "Qual será o resultado de 10 % 3?",
+        pergunta: "Um vetor contém [4, 7, 2, 9]. Qual é o maior elemento?",
+        opcoes: [
+            "2",
+            "4",
+            "7",
+            "9"
+        ],
+        correta: 3
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual será o resultado de uma busca linear pelo número 7 no vetor [3, 5, 7, 9], considerando índices começando em 0?",
         opcoes: [
             "0",
             "1",
+            "2",
+            "3"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Para realizar busca binária, o vetor normalmente precisa estar:",
+        opcoes: [
+            "Invertido",
+            "Ordenado",
+            "Vazio",
+            "Duplicado"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual será a saída conceitual de um algoritmo que soma todos os valores de [2, 4, 6]?",
+        opcoes: [
+            "8",
+            "10",
+            "12",
+            "14"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual técnica é especialmente útil para encontrar uma soma ou propriedade de uma janela contígua de elementos?",
+        opcoes: [
+            "Sliding Window",
+            "Bubble Sort",
+            "DFS",
+            "Hash Sort"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual estrutura utiliza o princípio LIFO?",
+        opcoes: [
+            "Fila",
+            "Pilha",
+            "Heap",
+            "Grafo"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual estrutura utiliza o princípio FIFO?",
+        opcoes: [
+            "Pilha",
+            "Árvore",
+            "Fila",
+            "Hash"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual é a complexidade típica de uma busca linear?",
+        opcoes: [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n²)"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual é a complexidade típica da busca binária?",
+        opcoes: [
+            "O(n)",
+            "O(log n)",
+            "O(n²)",
+            "O(2ⁿ)"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Algoritmos",
+        pergunta: "Qual técnica consiste em explorar uma possibilidade e voltar atrás quando ela não funciona?",
+        opcoes: [
+            "Hashing",
+            "Backtracking",
+            "Sorting",
+            "Casting"
+        ],
+        correta: 1
+    },
+
+
+    // =============================================================
+    // 10. QUESTÕES DE CÓDIGO — MISTURADAS
+    // =============================================================
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída? `int x = 2; for(int i = 0; i < 3; i++) x += i;`",
+        opcoes: [
+            "2",
             "3",
+            "5",
+            "6"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída em Python? `x = 1; for i in range(1, 4): x *= i; print(x)`",
+        opcoes: [
+            "3",
+            "4",
+            "6",
+            "10"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída em C? `int x = 2; int y = 3; printf(\"%d\", x + y * 2);`",
+        opcoes: [
+            "10",
+            "8",
+            "7",
+            "12"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída em C++? `int a = 10; int b = 3; cout << a % b;`",
+        opcoes: [
+            "3",
+            "1",
+            "0",
             "3.33"
         ],
         correta: 1
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "O operador % representa:",
+        nivel: "Desafio",
+        pergunta: "Qual será a saída em Python? `a = 3; b = 4; print(a < b)`",
         opcoes: [
-            "Divisão inteira",
-            "Potência",
-            "Resto da divisão",
-            "Multiplicação"
+            "3",
+            "4",
+            "True",
+            "False"
         ],
         correta: 2
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Se x = 10 e y = 5, qual é o resultado de x > y?",
+        nivel: "Desafio",
+        pergunta: "Qual será a saída? `x = [10, 20, 30]; x[0] = 99; print(x[0])`",
         opcoes: [
-            "true",
-            "false",
             "10",
-            "5"
+            "20",
+            "30",
+            "99"
+        ],
+        correta: 3
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será o resultado? `2 + 3 * 4 - 5`",
+        opcoes: [
+            "15",
+            "9",
+            "12",
+            "7"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída? `x = 10; if x > 5: x = x + 2; print(x)`",
+        opcoes: [
+            "5",
+            "10",
+            "12",
+            "15"
+        ],
+        correta: 2
+    },
+
+
+    // =============================================================
+    // 11. QUESTÕES DE "O QUE ACONTECE?"
+    // =============================================================
+
+    {
+        nivel: "Desafio",
+        pergunta: "O que acontece se um programa tentar acessar uma posição inexistente de um array?",
+        opcoes: [
+            "Sempre retorna zero",
+            "Pode ocorrer um erro ou comportamento indefinido, dependendo da linguagem",
+            "O array aumenta automaticamente",
+            "O computador reinicia"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "O que acontece com uma variável criada dentro de uma função em relação ao seu escopo local?",
+        opcoes: [
+            "Normalmente ela só pode ser acessada diretamente dentro daquele escopo",
+            "Ela automaticamente vira global",
+            "Ela é salva no banco de dados",
+            "Ela substitui todas as outras variáveis"
         ],
         correta: 0
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Quantas vezes o loop for(int i=0; i<5; i++) é executado?",
+        nivel: "Desafio",
+        pergunta: "Se um loop possui a condição `i < 5` e começa com `i = 0`, quantas iterações ocorrerão se i for incrementado em 1?",
         opcoes: [
             "4",
             "5",
@@ -443,1516 +1203,347 @@ const todasPerguntas = [
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Qual é a finalidade de um contador em um algoritmo?",
+        nivel: "Desafio",
+        pergunta: "Qual é o problema de um loop cuja condição de parada nunca se torna verdadeira?",
         opcoes: [
-            "Contar ocorrências ou iterações",
-            "Armazenar somente textos",
-            "Ordenar automaticamente um vetor",
-            "Compilar o programa"
+            "Ele pode se tornar um loop infinito",
+            "Ele sempre executa apenas uma vez",
+            "Ele transforma-se em uma função",
+            "Ele ordena automaticamente os dados"
+        ],
+        correta: 0
+    },
+
+
+    // =============================================================
+    // 12. WEB + LÓGICA
+    // =============================================================
+
+    {
+        nivel: "Web",
+        pergunta: "HTML, CSS e JavaScript possuem funções diferentes. Qual combinação está correta?",
+        opcoes: [
+            "HTML estrutura, CSS estiliza e JavaScript adiciona comportamento",
+            "HTML estiliza, CSS programa e JavaScript cria bancos",
+            "HTML cria APIs, CSS cria bancos e JavaScript apenas desenha",
+            "Os três possuem exatamente a mesma função"
         ],
         correta: 0
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Qual é a finalidade de um acumulador?",
+        nivel: "Web",
+        pergunta: "Qual código HTML cria um botão?",
         opcoes: [
-            "Guardar um valor que vai sendo atualizado, como uma soma",
-            "Criar um loop infinito",
-            "Comparar strings",
-            "Eliminar variáveis"
+            "<button>Clique</button>",
+            "<btn>Clique</btn>",
+            "<click>Clique</click>",
+            "<input-button>Clique</input-button>"
         ],
         correta: 0
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Qual algoritmo é normalmente utilizado para encontrar o maior elemento de um vetor percorrendo seus elementos?",
+        nivel: "Web",
+        pergunta: "Qual CSS deixa um texto centralizado horizontalmente?",
         opcoes: [
-            "Busca linear",
-            "DFS",
-            "BFS",
-            "Hashing obrigatório"
+            "font-align: center;",
+            "text-align: center;",
+            "align-text: middle;",
+            "center: true;"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Web",
+        pergunta: "Qual propriedade CSS altera o tamanho da fonte?",
+        opcoes: [
+            "font-size",
+            "text-size",
+            "size-font",
+            "font-height-only"
         ],
         correta: 0
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Para verificar se um número é par, qual condição pode ser utilizada?",
+        nivel: "Web",
+        pergunta: "Qual tag HTML representa normalmente uma lista não ordenada?",
         opcoes: [
-            "numero % 2 == 0",
-            "numero / 2 == 0",
-            "numero * 2 == 0",
-            "numero + 2 == 0"
+            "<ol>",
+            "<list>",
+            "<ul>",
+            "<li>"
         ],
-        correta: 0
+        correta: 2
     },
 
     {
-        nivel: "Algoritmos",
-        pergunta: "Qual é uma característica de um algoritmo correto?",
+        nivel: "Web",
+        pergunta: "Dentro de uma lista `<ul>`, qual tag normalmente representa cada item?",
         opcoes: [
-            "Sempre precisa ser muito grande",
-            "Deve produzir a solução esperada para as entradas válidas",
-            "Precisa usar recursão",
-            "Precisa utilizar classes"
+            "<item>",
+            "<li>",
+            "<list-item>",
+            "<ul-item>"
         ],
         correta: 1
     },
 
 
     // =============================================================
-    // 4. COMPLEXIDADE
+    // 13. MATEMÁTICA + PROGRAMAÇÃO
     // =============================================================
 
     {
-        nivel: "Complexidade",
-        pergunta: "O que representa a notação Big-O?",
+        nivel: "Matemática + Programação",
+        pergunta: "Um programa recebe n = 7. Qual condição verifica corretamente se n é ímpar?",
         opcoes: [
-            "A quantidade exata de memória RAM do computador",
-            "Uma forma de analisar o crescimento do custo de um algoritmo",
-            "A linguagem usada pelo programa",
-            "A quantidade de linhas do código"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Complexidade",
-        pergunta: "Qual é a complexidade de acessar diretamente um elemento de um array pelo índice?",
-        opcoes: [
-            "O(1)",
-            "O(n)",
-            "O(log n)",
-            "O(n²)"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Complexidade",
-        pergunta: "Qual é a complexidade de uma busca linear em um vetor não ordenado?",
-        opcoes: [
-            "O(1)",
-            "O(log n)",
-            "O(n)",
-            "O(n²)"
+            "n % 2 == 0",
+            "n / 2 == 0",
+            "n % 2 != 0",
+            "n * 2 != 0"
         ],
         correta: 2
     },
 
     {
-        nivel: "Complexidade",
-        pergunta: "Qual é a complexidade típica da busca binária?",
+        nivel: "Matemática + Programação",
+        pergunta: "Qual será o valor final de soma? `soma = 0; soma += 5; soma += 10; soma += 15`",
         opcoes: [
-            "O(n²)",
-            "O(n)",
-            "O(log n)",
-            "O(2ⁿ)"
+            "20",
+            "25",
+            "30",
+            "35"
         ],
         correta: 2
     },
 
     {
-        nivel: "Complexidade",
-        pergunta: "Qual destas complexidades cresce mais rapidamente para valores grandes de n?",
+        nivel: "Matemática + Programação",
+        pergunta: "Qual é o fatorial de 4?",
         opcoes: [
-            "O(log n)",
-            "O(n)",
-            "O(n²)",
-            "O(2ⁿ)"
+            "8",
+            "12",
+            "16",
+            "24"
         ],
         correta: 3
     },
 
     {
-        nivel: "Complexidade",
-        pergunta: "Qual é a complexidade de dois loops aninhados que percorrem n elementos cada?",
+        nivel: "Matemática + Programação",
+        pergunta: "Qual é o valor de 10²?",
         opcoes: [
-            "O(1)",
-            "O(log n)",
-            "O(n)",
-            "O(n²)"
-        ],
-        correta: 3
-    },
-
-    {
-        nivel: "Complexidade",
-        pergunta: "Um algoritmo O(n) é geralmente considerado:",
-        opcoes: [
-            "Linear",
-            "Quadrático",
-            "Logarítmico",
-            "Exponencial"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Complexidade",
-        pergunta: "Qual estrutura permite normalmente pesquisa por chave em tempo médio O(1)?",
-        opcoes: [
-            "Hash table",
-            "Lista encadeada",
-            "Pilha",
-            "Fila"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Complexidade",
-        pergunta: "Se um algoritmo percorre um vetor de tamanho n apenas uma vez, sua complexidade temporal normalmente é:",
-        opcoes: [
-            "O(1)",
-            "O(log n)",
-            "O(n)",
-            "O(n²)"
+            "20",
+            "50",
+            "100",
+            "1000"
         ],
         correta: 2
     },
 
     {
-        nivel: "Complexidade",
-        pergunta: "Qual é a complexidade espacial de armazenar um vetor com n elementos adicionais?",
-        opcoes: [
-            "O(1)",
-            "O(n)",
-            "O(log n)",
-            "O(n²)"
-        ],
-        correta: 1
-    },
-
-
-    // =============================================================
-    // 5. ARRAYS E STRINGS
-    // =============================================================
-
-    {
-        nivel: "Arrays",
-        pergunta: "O que é um array?",
-        opcoes: [
-            "Uma coleção de elementos geralmente acessados por índice",
-            "Uma função matemática",
-            "Um compilador",
-            "Um banco de dados"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Arrays",
-        pergunta: "Em C++, qual é o índice do primeiro elemento de um array?",
-        opcoes: [
-            "0",
-            "1",
-            "-1",
-            "Depende do compilador"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Arrays",
-        pergunta: "Se int v[5] for declarado, quais índices são válidos?",
-        opcoes: [
-            "1 até 5",
-            "0 até 4",
-            "0 até 5",
-            "1 até 4"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Arrays",
-        pergunta: "Qual estrutura de C++ possui tamanho dinâmico e é muito utilizada em programação competitiva?",
-        opcoes: [
-            "std::vector",
-            "std::fixed",
-            "std::static_array",
-            "std::pointer"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Arrays",
-        pergunta: "Qual método de std::vector adiciona um elemento no final?",
-        opcoes: [
-            "addEnd()",
-            "push_back()",
-            "append_end()",
-            "insert_last()"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Arrays",
-        pergunta: "Qual método retorna o número de elementos de um vector?",
-        opcoes: [
-            "length()",
-            "count()",
-            "size()",
-            "amount()"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "Strings",
-        pergunta: "Qual tipo da biblioteca padrão C++ é utilizado para strings?",
-        opcoes: [
-            "std::text",
-            "std::string",
-            "std::str",
-            "std::character_array_only"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Strings",
-        pergunta: "Qual método de std::string retorna o tamanho da string?",
-        opcoes: [
-            "size()",
-            "lengthOf()",
-            "count()",
-            "chars()"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Strings",
-        pergunta: "Uma string com 5 caracteres possui índices válidos de:",
-        opcoes: [
-            "1 a 5",
-            "0 a 5",
-            "0 a 4",
-            "-1 a 4"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "Arrays",
-        pergunta: "Qual técnica é útil para calcular rapidamente várias somas de intervalos de um array?",
-        opcoes: [
-            "Prefix sum",
-            "Bubble sort",
-            "DFS",
-            "Backtracking"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 6. ESTRUTURAS DE DADOS
-    // =============================================================
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Qual estrutura segue o princípio LIFO?",
-        opcoes: [
-            "Fila",
-            "Pilha",
-            "Heap mínimo",
-            "Array"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Qual estrutura segue o princípio FIFO?",
-        opcoes: [
-            "Pilha",
-            "Fila",
-            "Árvore",
-            "Heap"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Qual container C++ representa uma pilha?",
-        opcoes: [
-            "std::stack",
-            "std::queue",
-            "std::map",
-            "std::set"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Qual container C++ representa uma fila?",
-        opcoes: [
-            "std::stack",
-            "std::queue",
-            "std::vector",
-            "std::set"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Em uma pilha, qual operação adiciona um elemento?",
-        opcoes: [
-            "push",
-            "enqueue",
-            "insert_front_only",
-            "append_queue"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Em uma fila, qual operação normalmente remove o primeiro elemento?",
-        opcoes: [
-            "pop_front",
-            "dequeue",
-            "push",
-            "top"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Qual estrutura é especialmente adequada para representar relações hierárquicas?",
-        opcoes: [
-            "Árvore",
-            "Fila",
-            "Pilha",
-            "String"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Em uma árvore binária, cada nó pode ter no máximo:",
-        opcoes: [
-            "1 filho",
-            "2 filhos",
-            "3 filhos",
-            "4 filhos"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Em uma árvore binária de busca (BST), valores menores que o nó normalmente ficam:",
-        opcoes: [
-            "Na subárvore esquerda",
-            "Na subárvore direita",
-            "Sempre na raiz",
-            "Fora da árvore"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Estruturas de Dados",
-        pergunta: "Qual estrutura é baseada em pares chave-valor?",
-        opcoes: [
-            "std::map",
-            "std::stack",
-            "std::queue",
-            "std::vector"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 7. BUSCA E ORDENAÇÃO
-    // =============================================================
-
-    {
-        nivel: "Busca",
-        pergunta: "A busca binária exige que os dados estejam:",
-        opcoes: [
-            "Duplicados",
-            "Ordenados",
-            "Em uma pilha",
-            "Em uma fila"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Busca",
-        pergunta: "Qual é a ideia principal da busca binária?",
-        opcoes: [
-            "Verificar todos os elementos",
-            "Dividir repetidamente o espaço de busca pela metade",
-            "Ordenar os elementos",
-            "Apagar metade dos elementos"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual algoritmo de ordenação possui complexidade média O(n log n)?",
-        opcoes: [
-            "Bubble Sort",
-            "Merge Sort",
-            "Linear Search",
-            "Sequential Scan"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual algoritmo utiliza a ideia de escolher um pivô e particionar os elementos?",
-        opcoes: [
-            "Merge Sort",
-            "Quick Sort",
-            "Bubble Sort",
-            "Counting Search"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual algoritmo compara repetidamente elementos adjacentes?",
-        opcoes: [
-            "Bubble Sort",
-            "Quick Sort",
-            "Merge Sort",
-            "Binary Search"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual algoritmo divide o array em partes, ordena as partes e depois as combina?",
-        opcoes: [
-            "Bubble Sort",
-            "Merge Sort",
-            "Linear Search",
-            "Hash Sort"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual algoritmo pode ser muito eficiente quando os valores inteiros estão dentro de um intervalo pequeno conhecido?",
-        opcoes: [
-            "Counting Sort",
-            "Binary Search",
-            "DFS",
-            "BFS"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual função da biblioteca <algorithm> pode ordenar um vector em C++?",
-        opcoes: [
-            "sort()",
-            "order()",
-            "organize()",
-            "arrange()"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual é a complexidade média do Quick Sort?",
-        opcoes: [
-            "O(1)",
-            "O(log n)",
-            "O(n log n)",
-            "O(n²) sempre"
-        ],
-        correta: 2
-    },
-
-    {
-        nivel: "Ordenação",
-        pergunta: "Qual é a complexidade do Bubble Sort no pior caso?",
-        opcoes: [
-            "O(1)",
-            "O(log n)",
-            "O(n)",
-            "O(n²)"
-        ],
-        correta: 3
-    },
-
-
-    // =============================================================
-    // 8. TWO POINTERS / SLIDING WINDOW
-    // =============================================================
-
-    {
-        nivel: "Técnicas de Algoritmos",
-        pergunta: "A técnica Two Pointers utiliza normalmente:",
-        opcoes: [
-            "Dois índices ou referências para percorrer os dados",
-            "Duas linguagens de programação",
-            "Duas CPUs",
-            "Duas bases de dados"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Técnicas de Algoritmos",
-        pergunta: "A técnica Sliding Window é especialmente útil para problemas envolvendo:",
-        opcoes: [
-            "Subarrays ou substrings contíguas",
-            "Somente árvores",
-            "Somente grafos",
-            "Somente compiladores"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Técnicas de Algoritmos",
-        pergunta: "Qual técnica pode reduzir uma solução O(n²) para O(n) em determinados problemas de subarray?",
-        opcoes: [
-            "Sliding Window",
-            "Bubble Sort",
-            "Recursão ingênua",
-            "Brute force adicional"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Técnicas de Algoritmos",
-        pergunta: "Em Two Pointers, os ponteiros podem frequentemente:",
-        opcoes: [
-            "Mover-se de acordo com as condições do problema",
-            "Ser obrigatoriamente iguais",
-            "Ser sempre aleatórios",
-            "Apontar somente para o primeiro elemento"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 9. RECURSÃO
-    // =============================================================
-
-    {
-        nivel: "Recursão",
-        pergunta: "O que é uma função recursiva?",
-        opcoes: [
-            "Uma função que chama a si mesma",
-            "Uma função sem parâmetros",
-            "Uma função que nunca retorna",
-            "Uma função que só trabalha com arrays"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Recursão",
-        pergunta: "O que uma função recursiva precisa normalmente possuir para terminar?",
-        opcoes: [
-            "Um caso base",
-            "Um loop infinito",
-            "Uma variável global",
-            "Um ponteiro"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Recursão",
-        pergunta: "O que pode acontecer quando uma recursão não possui uma condição adequada de parada?",
-        opcoes: [
-            "O programa pode sofrer stack overflow",
-            "O programa sempre fica mais rápido",
-            "A memória aumenta infinitamente sem erro",
-            "O compilador transforma automaticamente em loop"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Recursão",
-        pergunta: "Qual problema clássico pode ser resolvido com recursão?",
-        opcoes: [
-            "Fatorial",
-            "Somente entrada de dados",
-            "Somente impressão de texto",
-            "Somente operações de I/O"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Recursão",
-        pergunta: "Qual é o resultado de 5!?",
+        nivel: "Matemática + Programação",
+        pergunta: "Se uma variável começa com 100 e é reduzida em 25%, qual será seu novo valor?",
         opcoes: [
             "25",
-            "60",
-            "100",
-            "120"
+            "50",
+            "75",
+            "80"
         ],
-        correta: 3
+        correta: 2
+    },
+
+    {
+        nivel: "Matemática + Programação",
+        pergunta: "Qual número é primo?",
+        opcoes: [
+            "21",
+            "27",
+            "29",
+            "35"
+        ],
+        correta: 2
     },
 
 
     // =============================================================
-    // 10. BACKTRACKING
+    // 14. DESAFIOS MAIS DIFÍCEIS
     // =============================================================
 
     {
-        nivel: "Backtracking",
-        pergunta: "O que é Backtracking?",
+        nivel: "Desafio",
+        pergunta: "Qual será a saída em Python? `x = [1, 2, 3]; y = x; y.append(4); print(x)`",
         opcoes: [
-            "Uma técnica que explora possibilidades e desfaz escolhas quando necessário",
-            "Um algoritmo de ordenação",
-            "Um banco de dados",
-            "Um tipo de variável"
+            "[1, 2, 3]",
+            "[4, 1, 2, 3]",
+            "[1, 2, 3, 4]",
+            "Error"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída? `x = 0; for i in range(1, 5): x += i; print(x)`",
+        opcoes: [
+            "5",
+            "10",
+            "15",
+            "4"
+        ],
+        correta: 1
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será a saída? `int x = 1; for(int i=0; i<4; i++) x *= 2;`",
+        opcoes: [
+            "4",
+            "8",
+            "16",
+            "32"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual será o resultado de uma função que retorna `n * (n - 1)` quando recebe n = 5?",
+        opcoes: [
+            "10",
+            "15",
+            "20",
+            "25"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Um algoritmo percorre um vetor de 100 elementos uma única vez. Qual é sua complexidade típica?",
+        opcoes: [
+            "O(1)",
+            "O(log n)",
+            "O(n)",
+            "O(n²)"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Dois loops aninhados percorrem cada um n elementos. Qual é a complexidade típica?",
+        opcoes: [
+            "O(n)",
+            "O(log n)",
+            "O(n²)",
+            "O(1)"
+        ],
+        correta: 2
+    },
+
+    {
+        nivel: "Desafio",
+        pergunta: "Qual estrutura seria mais adequada para verificar rapidamente se um elemento já apareceu, em média?",
+        opcoes: [
+            "Hash Set",
+            "Stack",
+            "Queue",
+            "Array não ordenado"
         ],
         correta: 0
     },
 
     {
-        nivel: "Backtracking",
-        pergunta: "Qual problema clássico pode ser resolvido com Backtracking?",
+        nivel: "Desafio",
+        pergunta: "Qual algoritmo é adequado para encontrar o menor caminho a partir de uma origem em um grafo com pesos não negativos?",
         opcoes: [
-            "N-Queens",
-            "Soma simples",
-            "Impressão de uma variável",
-            "Conversão de tipos"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Backtracking",
-        pergunta: "No Backtracking, o que significa desfazer uma escolha?",
-        opcoes: [
-            "Voltar ao estado anterior para testar outra possibilidade",
-            "Apagar o programa",
-            "Reiniciar o computador",
-            "Ordenar novamente o array"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 11. PROGRAMAÇÃO DINÂMICA
-    // =============================================================
-
-    {
-        nivel: "Programação Dinâmica",
-        pergunta: "Qual é a ideia central da Programação Dinâmica?",
-        opcoes: [
-            "Resolver subproblemas e reutilizar seus resultados",
-            "Sempre utilizar recursão infinita",
-            "Evitar qualquer uso de memória",
-            "Ordenar todos os dados"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Dinâmica",
-        pergunta: "Qual característica é comum em problemas de Programação Dinâmica?",
-        opcoes: [
-            "Subproblemas sobrepostos",
-            "Ausência total de estados",
-            "Necessidade obrigatória de grafos",
-            "Uso obrigatório de ponteiros"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Dinâmica",
-        pergunta: "O que é memoization?",
-        opcoes: [
-            "Guardar resultados de subproblemas para evitar recalculá-los",
-            "Ordenar um array",
-            "Criar uma classe",
-            "Eliminar a recursão sempre"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Dinâmica",
-        pergunta: "Qual é uma forma de calcular Fibonacci de maneira eficiente usando DP?",
-        opcoes: [
-            "Guardar os valores anteriores",
-            "Calcular tudo novamente sem guardar nada",
-            "Usar apenas números aleatórios",
-            "Ordenar a sequência"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Dinâmica",
-        pergunta: "O problema da Mochila 0/1 é um exemplo clássico de:",
-        opcoes: [
-            "Programação Dinâmica",
-            "Busca binária",
             "Bubble Sort",
-            "Hashing"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 12. GRAFOS
-    // =============================================================
-
-    {
-        nivel: "Grafos",
-        pergunta: "O que representa um grafo?",
-        opcoes: [
-            "Um conjunto de vértices e arestas",
-            "Apenas uma lista de números",
-            "Um único número",
-            "Uma função matemática somente"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Grafos",
-        pergunta: "Como são chamados os elementos de um grafo?",
-        opcoes: [
-            "Vértices e arestas",
-            "Linhas e colunas",
-            "Chaves e valores",
-            "Pilhas e filas"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Grafos",
-        pergunta: "Qual algoritmo utiliza normalmente uma fila para realizar busca em largura?",
-        opcoes: [
-            "BFS",
-            "DFS",
-            "Quick Sort",
-            "Merge Sort"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Grafos",
-        pergunta: "Qual algoritmo utiliza normalmente uma pilha ou recursão para realizar busca em profundidade?",
-        opcoes: [
-            "BFS",
-            "DFS",
+            "Dijkstra",
             "Binary Search",
             "Counting Sort"
         ],
         correta: 1
     },
 
-    {
-        nivel: "Grafos",
-        pergunta: "O que significa BFS?",
-        opcoes: [
-            "Breadth-First Search",
-            "Binary Fast Sort",
-            "Basic File System",
-            "Breadth File Structure"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Grafos",
-        pergunta: "O que significa DFS?",
-        opcoes: [
-            "Data Fast Search",
-            "Depth-First Search",
-            "Direct File System",
-            "Dynamic Fast Sort"
-        ],
-        correta: 1
-    },
-
 
     // =============================================================
-    // 13. HASHING
+    // 15. QUESTÕES CONCEITUAIS FINAIS
     // =============================================================
 
     {
-        nivel: "Hashing",
-        pergunta: "Qual é a finalidade de uma função hash?",
+        nivel: "Programação",
+        pergunta: "Qual é a principal diferença entre HTML e CSS?",
         opcoes: [
-            "Mapear uma chave para uma posição ou valor de hash",
-            "Ordenar sempre os dados",
-            "Criar uma conexão de rede",
-            "Compilar o programa"
+            "HTML estrutura o conteúdo e CSS define sua apresentação",
+            "HTML é usado para bancos e CSS para APIs",
+            "CSS estrutura algoritmos e HTML faz cálculos",
+            "Não existe diferença"
         ],
         correta: 0
     },
 
     {
-        nivel: "Hashing",
-        pergunta: "O que é uma colisão em uma tabela hash?",
+        nivel: "Programação",
+        pergunta: "Qual destas opções é uma linguagem de programação?",
         opcoes: [
-            "Quando duas chaves produzem a mesma posição de hash",
-            "Quando a tabela fica vazia",
-            "Quando uma chave é removida",
-            "Quando o computador desliga"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Hashing",
-        pergunta: "Qual container C++ implementa uma tabela hash?",
-        opcoes: [
-            "std::unordered_map",
-            "std::stack",
-            "std::queue",
-            "std::vector"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 14. BANCO DE DADOS
-    // =============================================================
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "O que significa SQL?",
-        opcoes: [
-            "Structured Query Language",
-            "Simple Question Language",
-            "System Query Logic",
-            "Structured Queue Language"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "Qual comando SQL é utilizado para consultar dados?",
-        opcoes: [
-            "SELECT",
-            "GET",
-            "READ",
-            "FETCH_ALL"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "Qual comando SQL adiciona novos registros?",
-        opcoes: [
-            "ADD",
-            "INSERT",
-            "CREATE_ROW",
-            "PUSH"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "Qual comando SQL altera registros existentes?",
-        opcoes: [
-            "CHANGE",
-            "MODIFY",
-            "UPDATE",
-            "EDIT"
+            "HTML",
+            "CSS",
+            "Python",
+            "HTTP"
         ],
         correta: 2
     },
 
     {
-        nivel: "Banco de Dados",
-        pergunta: "Qual comando SQL remove registros?",
+        nivel: "Programação",
+        pergunta: "Qual destas opções é uma linguagem de marcação?",
         opcoes: [
-            "REMOVE",
-            "DELETE",
-            "DROP_ROW",
-            "CLEAR"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "Para que serve uma chave primária?",
-        opcoes: [
-            "Identificar unicamente um registro",
-            "Armazenar imagens",
-            "Executar consultas automaticamente",
-            "Criar uma senha"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "Qual cláusula SQL é usada para filtrar registros?",
-        opcoes: [
-            "FILTER",
-            "WHERE",
-            "WHEN",
-            "HAVING_ONLY"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Banco de Dados",
-        pergunta: "Qual cláusula SQL é usada para ordenar resultados?",
-        opcoes: [
-            "SORT BY",
-            "ORDER BY",
-            "ARRANGE",
-            "GROUP SORT"
-        ],
-        correta: 1
-    },
-
-
-    // =============================================================
-    // 15. JAVASCRIPT / WEB
-    // =============================================================
-
-    {
-        nivel: "JavaScript",
-        pergunta: "Qual palavra-chave pode declarar uma variável em JavaScript cujo valor pode ser reatribuído?",
-        opcoes: [
-            "let",
-            "constant",
-            "define",
-            "variable_only"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "JavaScript",
-        pergunta: "Qual método imprime informações no console do navegador?",
-        opcoes: [
-            "console.log()",
-            "print.console()",
-            "echo()",
-            "terminal.write()"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "JavaScript",
-        pergunta: "Qual método adiciona um elemento ao final de um array em JavaScript?",
-        opcoes: [
-            "push()",
-            "append()",
-            "addLast()",
-            "insertEnd()"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "JavaScript",
-        pergunta: "Qual método remove o último elemento de um array JavaScript?",
-        opcoes: [
-            "remove()",
-            "deleteLast()",
-            "pop()",
-            "lastDelete()"
+            "C",
+            "Python",
+            "HTML",
+            "C++"
         ],
         correta: 2
     },
 
     {
-        nivel: "JavaScript",
-        pergunta: "O que o método fetch() é usado para fazer?",
+        nivel: "Programação",
+        pergunta: "Qual destas opções é usada principalmente para estilização de páginas web?",
         opcoes: [
-            "Fazer requisições a recursos, como APIs",
-            "Criar um banco de dados automaticamente",
-            "Compilar JavaScript",
-            "Criar classes CSS"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "JavaScript",
-        pergunta: "Qual formato é muito utilizado para trocar dados entre frontend e API?",
-        opcoes: [
-            "JPEG",
-            "JSON",
-            "MP3",
-            "PNG"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Web",
-        pergunta: "Qual linguagem é usada principalmente para estruturar páginas web?",
-        opcoes: [
-            "HTML",
+            "C",
             "CSS",
-            "SQL",
-            "PHP"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Web",
-        pergunta: "Qual linguagem é usada principalmente para estilizar páginas web?",
-        opcoes: [
-            "HTML",
-            "CSS",
-            "SQL",
-            "JSON"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Web",
-        pergunta: "Qual tecnologia normalmente adiciona comportamento e interatividade às páginas web?",
-        opcoes: [
-            "JavaScript",
-            "HTML",
-            "CSS",
+            "Python",
             "SQL"
         ],
-        correta: 0
-    },
-
-    {
-        nivel: "Web",
-        pergunta: "O que significa API?",
-        opcoes: [
-            "Application Programming Interface",
-            "Advanced Programming Internet",
-            "Application Process Integration",
-            "Automated Program Instruction"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 16. GIT E DESENVOLVIMENTO
-    // =============================================================
-
-    {
-        nivel: "Git",
-        pergunta: "Para que serve o Git?",
-        opcoes: [
-            "Controle de versão",
-            "Criar bancos de dados",
-            "Editar imagens",
-            "Executar código C++ automaticamente"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Git",
-        pergunta: "Qual comando inicializa um repositório Git?",
-        opcoes: [
-            "git start",
-            "git init",
-            "git create",
-            "git begin"
-        ],
         correta: 1
     },
 
     {
-        nivel: "Git",
-        pergunta: "Qual comando mostra o estado atual do repositório?",
+        nivel: "Programação",
+        pergunta: "Qual destas situações representa melhor um algoritmo?",
         opcoes: [
-            "git state",
-            "git status",
-            "git check",
-            "git info"
+            "Uma sequência organizada de passos para resolver um problema",
+            "Um cabo de rede",
+            "Uma placa gráfica",
+            "Uma pasta do computador"
+        ],
+        correta: 0
+    },
+
+    {
+        nivel: "Programação",
+        pergunta: "Qual é uma boa característica de uma solução de programação?",
+        opcoes: [
+            "Ser necessariamente a maior possível",
+            "Resolver corretamente o problema e usar os recursos de forma adequada",
+            "Ter sempre mais de 100 linhas",
+            "Usar obrigatoriamente recursão"
         ],
         correta: 1
-    },
-
-    {
-        nivel: "Git",
-        pergunta: "Qual comando cria um commit?",
-        opcoes: [
-            "git save",
-            "git commit",
-            "git record",
-            "git snapshot"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Git",
-        pergunta: "Qual comando baixa alterações de um repositório remoto e integra essas alterações?",
-        opcoes: [
-            "git pull",
-            "git download",
-            "git receive",
-            "git sync-only"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Git",
-        pergunta: "Qual comando envia commits para um repositório remoto?",
-        opcoes: [
-            "git send",
-            "git upload",
-            "git push",
-            "git transfer"
-        ],
-        correta: 2
-    },
-
-
-    // =============================================================
-    // 17. ORIENTAÇÃO A OBJETOS
-    // =============================================================
-
-    {
-        nivel: "Programação Orientada a Objetos",
-        pergunta: "O que é uma classe?",
-        opcoes: [
-            "Um modelo para criar objetos",
-            "Uma variável inteira",
-            "Um banco de dados",
-            "Uma função global obrigatória"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Orientada a Objetos",
-        pergunta: "O que é um objeto?",
-        opcoes: [
-            "Uma instância de uma classe",
-            "Sempre uma função",
-            "Um arquivo executável",
-            "Um tipo de loop"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Orientada a Objetos",
-        pergunta: "Qual conceito permite esconder detalhes internos de implementação?",
-        opcoes: [
-            "Encapsulamento",
-            "Ordenação",
-            "Recursão",
-            "Iteração"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Programação Orientada a Objetos",
-        pergunta: "Qual conceito permite que uma classe herde características de outra?",
-        opcoes: [
-            "Polimorfismo",
-            "Herança",
-            "Recursão",
-            "Composição obrigatória"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Programação Orientada a Objetos",
-        pergunta: "Qual conceito permite que uma mesma interface tenha comportamentos diferentes?",
-        opcoes: [
-            "Polimorfismo",
-            "Compilação",
-            "Iteração",
-            "Hashing"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 18. PONTEIROS E MEMÓRIA — C++
-    // =============================================================
-
-    {
-        nivel: "C++ — Memória",
-        pergunta: "O que é um ponteiro em C++?",
-        opcoes: [
-            "Uma variável que armazena um endereço de memória",
-            "Uma variável que só armazena strings",
-            "Um tipo de loop",
-            "Um arquivo executável"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "C++ — Memória",
-        pergunta: "Qual operador obtém o endereço de uma variável?",
-        opcoes: [
-            "*",
-            "&",
-            "#",
-            "@"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++ — Memória",
-        pergunta: "Qual operador é usado para acessar o valor apontado por um ponteiro?",
-        opcoes: [
-            "&",
-            "*",
-            "%",
-            "->>"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "C++ — Memória",
-        pergunta: "O que significa nullptr em C++ moderno?",
-        opcoes: [
-            "Um ponteiro que não aponta para um objeto válido",
-            "Um número inteiro positivo",
-            "Uma string vazia obrigatoriamente",
-            "Um array vazio"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 19. QUESTÕES DE RACIOCÍNIO
-    // =============================================================
-
-    {
-        nivel: "Raciocínio Computacional",
-        pergunta: "Se um algoritmo precisa verificar todos os elementos de um vetor para encontrar um valor, qual estratégia básica pode ser usada?",
-        opcoes: [
-            "Busca linear",
-            "Busca binária obrigatoriamente",
-            "DFS",
-            "Quick Sort"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Raciocínio Computacional",
-        pergunta: "Se um vetor ordenado possui 1.000.000 de elementos, qual busca é normalmente mais eficiente para procurar um valor?",
-        opcoes: [
-            "Busca linear",
-            "Busca binária",
-            "Bubble Sort",
-            "DFS"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Raciocínio Computacional",
-        pergunta: "Qual estratégia divide um problema em partes menores, resolve essas partes e combina os resultados?",
-        opcoes: [
-            "Divisão e conquista",
-            "Busca linear",
-            "Hashing",
-            "Força bruta sempre"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Raciocínio Computacional",
-        pergunta: "Qual é o principal objetivo de otimizar um algoritmo?",
-        opcoes: [
-            "Reduzir recursos como tempo ou memória mantendo a solução correta",
-            "Aumentar o número de linhas",
-            "Tornar o código sempre maior",
-            "Eliminar todas as variáveis"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Raciocínio Computacional",
-        pergunta: "O que caracteriza uma solução brute force?",
-        opcoes: [
-            "Explorar diretamente todas ou muitas possibilidades",
-            "Usar obrigatoriamente programação dinâmica",
-            "Usar somente busca binária",
-            "Nunca testar possibilidades"
-        ],
-        correta: 0
-    },
-
-
-    // =============================================================
-    // 20. QUESTÕES AVANÇADAS
-    // =============================================================
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Qual algoritmo é utilizado para encontrar caminhos mínimos a partir de uma origem em um grafo com pesos não negativos?",
-        opcoes: [
-            "Dijkstra",
-            "Bubble Sort",
-            "Kruskal somente",
-            "Binary Search"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Qual algoritmo é conhecido por encontrar uma árvore geradora mínima usando uma estratégia baseada em arestas?",
-        opcoes: [
-            "Kruskal",
-            "Binary Search",
-            "Floyd-Warshall somente",
-            "Bubble Sort"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Qual algoritmo encontra distâncias mínimas entre todos os pares de vértices?",
-        opcoes: [
-            "Floyd-Warshall",
-            "Quick Sort",
-            "DFS somente",
-            "Counting Sort"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "O que é um grafo direcionado?",
-        opcoes: [
-            "Um grafo em que as arestas possuem direção",
-            "Um grafo sem vértices",
-            "Um grafo sem arestas",
-            "Um grafo que só possui ciclos"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "O que é um grafo ponderado?",
-        opcoes: [
-            "Um grafo cujas arestas ou vértices possuem valores associados",
-            "Um grafo que só possui números pares",
-            "Um grafo sem conexões",
-            "Um grafo sem memória"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "O que é uma árvore geradora mínima?",
-        opcoes: [
-            "Uma árvore que conecta os vértices com custo total mínimo",
-            "Uma árvore com o maior número possível de ciclos",
-            "Uma árvore sem vértices",
-            "Uma árvore usada somente para strings"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Qual estrutura é frequentemente usada para implementar uma Priority Queue eficiente?",
-        opcoes: [
-            "Heap",
-            "String",
-            "Fila simples obrigatoriamente",
-            "Matriz"
-        ],
-        correta: 0
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Em um Min Heap, o elemento na raiz é normalmente:",
-        opcoes: [
-            "O maior elemento",
-            "O menor elemento",
-            "Sempre zero",
-            "Sempre negativo"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Em um Max Heap, o elemento na raiz é normalmente:",
-        opcoes: [
-            "O menor elemento",
-            "O maior elemento",
-            "Sempre zero",
-            "Sempre positivo"
-        ],
-        correta: 1
-    },
-
-    {
-        nivel: "Algoritmos Avançados",
-        pergunta: "Qual é uma aplicação comum de uma fila de prioridade?",
-        opcoes: [
-            "Processar elementos de acordo com sua prioridade",
-            "Armazenar somente strings",
-            "Substituir o compilador",
-            "Criar arquivos HTML"
-        ],
-        correta: 0
     }
 
 ];
